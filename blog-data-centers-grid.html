@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Data centers will strain the grid (even with demand response) – ORFEUS</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+</head>
+<body>
+  <div class="page">
+    <header class="princeton-shell">
+      ORFEUS · Operational Risk Financialization of Electricity Under Stochasticity
+    </header>
+
+    <nav class="main-nav" aria-label="Main navigation">
+      <div class="nav-brand">
+        <img class="nav-brand-princeton" src="assets/PU_mark.png" alt="Princeton University">
+        <span class="nav-brand-sep"></span>
+        <img class="nav-brand-mark" src="assets/orfeus-logo_0.png" alt="ORFEUS logo">
+        <a href="index.html" class="nav-link nav-link--primary">ORFEUS</a>
+      </div>
+      <div class="nav-links">
+        <div class="nav-item nav-item--collapsible">
+          <a href="papers.html" class="nav-link">Papers</a>
+        </div>
+        <div class="nav-item">
+          <a href="people.html" class="nav-link">People</a>
+        </div>
+        <div class="nav-item">
+          <a href="blogs.html" class="nav-link">Blog</a>
+        </div>
+        <div class="nav-item nav-item--collapsible">
+          <a href="data-visualization.html" class="nav-link">Data Visualization ▾</a>
+          <div class="nav-dropdown">
+            <a href="data-visualization-scenarios.html">Scenarios Visualization</a>
+            <a href="data-visualization-reliability.html">Reliability Cost Index</a>
+            <a href="data-visualization-lmp.html">LMP Geographical Visualization</a>
+          </div>
+        </div>
+        <div class="nav-item nav-item--collapsible">
+          <a href="data-download.html" class="nav-link">Data Download</a>
+        </div>
+        <div class="nav-item nav-item--collapsible">
+          <a href="arpa-e-poster-2024.html" class="nav-link">ARPA‑E Poster</a>
+        </div>
+        <div class="nav-item nav-item--more">
+          <a href="#" class="nav-link">More ▾</a>
+          <div class="nav-dropdown">
+            <a href="papers.html">Papers</a>
+            <a href="blogs.html">Blog</a>
+            <a href="data-visualization.html">Data Visualization</a>
+            <a href="data-download.html">Data Download</a>
+            <a href="arpa-e-poster-2024.html">ARPA‑E Poster</a>
+          </div>
+        </div>
+        <div class="nav-item">
+          <a href="login.html" class="nav-link nav-link--cta">Log in</a>
+        </div>
+      </div>
+    </nav>
+
+    <article class="reveal" style="max-width: 720px;">
+      <p style="font-size: 0.85rem; color: var(--muted); margin-bottom: 8px;"><a href="blogs.html">Blog</a></p>
+      <h1>Data centers will strain the grid (even with demand response)</h1>
+      <p class="lead" style="margin-bottom: 24px;"><strong>Authors:</strong> Kirill Sirik, Alex Crosier, Ronnie Sircar</p>
+
+      <h2>Abstract</h2>
+      <p>Large technology companies suddenly have a massive hunger for electricity to power their AI and cloud-computing data centers. In an April 2025 report, the Texas grid operator <a href="https://www.ercot.com/files/docs/2025/04/07/8.1-Long-Term-Load-Forecast-Update-2025-2031-and-Methodology-Changes.pdf" target="_blank" rel="noopener">forecasted</a> that data centers will demand 22 GW by 2030, up from around 1 GW today. Using power-flow grid simulation software <a href="https://github.com/PrincetonUniversity/Vatic" target="_blank" rel="noopener">Vatic</a>, we performed various studies about the impact of new data center loads on the Texas grid. We used a forecasted generation mix for the Texas grid in 2030 that consists of 50% of generation from renewables. By adding 22 GW of additional demand from data centers, average wholesale electricity prices rose from $21.18/MWh to $31.47/MWh, a 49% increase. Total system costs, which accounts for fixed, variable, and a load shedding penalty, increased from $1.4 million per hour to $74.5 million per hour. This dramatic increase in cost shows that without additional supply the system cannot support 22 GW of added data center load. To help facilitate data center additions, researchers and practitioners suggest the large loads should participate in demand response, the curtailment of energy demand during periods of grid stress. We implemented demand response in Vatic curtailing each data center 0.5% of the time to reduce load during peak demand hours. At this level of curtailment, demand response occurred in the system 72 hours of the year and reduced cost significantly (up to 50%) during these hours. However when considering an average over the whole year (8760 hours), demand response had a limited impact on total system costs, and they remained at a high level of $71.0 million per hour.</p>
+
+      <h2>Introduction</h2>
+      <p>With the ever-growing concern for large-scale sustainability implementation, tech companies across the board have been at the forefront of expanding and pursuing net-zero initiatives for years. Google <a href="https://blog.google/outreach-initiatives/sustainability/our-third-decade-climate-action-realizing-carbon-free-future/" target="_blank" rel="noopener">announced</a> going carbon-neutral almost 20 years ago, in 2007. Other giants, including <a href="https://blogs.microsoft.com/blog/2020/01/16/microsoft-will-be-carbon-negative-by-2030/" target="_blank" rel="noopener">Microsoft</a>, <a href="https://www.apple.com/newsroom/2020/07/apple-commits-to-be-100-percent-carbon-neutral-for-its-supply-chain-and-products-by-2030/" target="_blank" rel="noopener">Apple</a>, and <a href="https://sustainability.aboutamazon.com/climate-solutions" target="_blank" rel="noopener">Amazon</a> have all pledged to go carbon-neutral by the year 2040. With the recent acceleration of the Artificial Intelligence (AI) race, however, the decades-long efforts to decrease carbon emissions and embrace sustainable values may be at stake.</p>
+      <p>Data centers, which are large-scale facilities responsible for the remote storage, processing, and the distribution of large amounts of data, are growing ever more pivotal. Although data centers emerged in mid-20th century, more than 70 years ago, they have now become a major player in contributing to the rising energy demands of AI. According to the 2024 Berkeley National Lab United States Data Center Energy Usage <a href="https://escholarship.org/uc/item/32d6m0d1" target="_blank" rel="noopener">Report</a>, “data center annual energy use remained stable between 2014–2016 at about 60 TWh, continuing a minimal growth trend observed since about 2010”. In 2017, however, a major shift occurred with the integration of Graphical Processing Units (GPUs) to support AI-driven tasks. Prior to 2017, most computer clusters in the data centers were run on Central Processing Units (CPUs), which are general-purpose processors found in most computers. While CPUs are great for performing complex sequential tasks, they lose in performance to GPUs at performing large-scale, parallel processing tasks. Over the five-year period from 2018-2023, data center energy consumption <a href="https://escholarship.org/uc/item/32d6m0d1" target="_blank" rel="noopener">has risen tremendously</a> from 76 TWh in 2018, representing 1.9% annual US electricity consumption, reaching 176 TWh in 2023, which is 4.4% of annual US electricity consumption by the end of 2023.</p>
+      <p>Despite already being high, the demand from data centers is projected to increase even more in the near future. As per the Berkeley National Lab <a href="https://escholarship.org/uc/item/32d6m0d1" target="_blank" rel="noopener">report</a>, in the year 2028, data centers are projected to make up between 6.7-12.0% of the total US electricity consumption, with low and high estimates of 325 and 580 TWh, respectively. Other sources share similar estimates. Goldman Sachs <a href="https://www.goldmansachs.com/insights/articles/AI-poised-to-drive-160-increase-in-power-demand" target="_blank" rel="noopener">estimates</a> that data centers will consume 400 TWh and Barclays <a href="https://www.ib.barclays/content/dam/barclaysmicrosites/ibpublic/documents/our-insights/Powering_AI_Impact_Series/ImpactSeries_13_brochure.pdf" target="_blank" rel="noopener">estimates</a> that the number will be 560 TWh in the year 2030. According to Eliza Martin and Ari Peskoe of the Harvard Environmental and Energy Law program, “By 2030, data centers may consume as much as 12 percent of all U.S. electricity and could be largely responsible for quintupling the annual growth in electricity demand”.</p>
+      <p>It is impossible to predict just how much demand, percent-wise, from a particular data center, or even multiple data centers across the US, is driven by AI. Such data is simply not available. Despite this limitation, it is still possible to study the impact of AI on energy demand. As discussed in an International Energy Agency (IEA) <a href="https://www.iea.org/news/ai-is-set-to-drive-surging-electricity-demand-from-data-centres-while-offering-the-potential-to-transform-how-the-energy-sector-works" target="_blank" rel="noopener">Energy and AI report</a>, the bulk of data center growth is from AI integration.</p>
+
+      <h2>Methodology</h2>
+      <p>With the tools available to us, including a grid optimization software called <a href="https://github.com/PrincetonUniversity/Vatic" target="_blank" rel="noopener">Vatic</a>, we studied the impact of projected data center growth on a synthetic Texas grid from 2030. The grid was constructed from publicly available information by a <a href="https://birchfield.engr.tamu.edu/" target="_blank" rel="noopener">group of researchers from Texas A&M</a>. We selected Texas as the state to conduct simulations on for a few reasons. Firstly, Texas’ grid operator, Electric Reliability Council of Texas (ERCOT), which handles around 90% of Texas electricity load, provides adjusted load forecasts which include data center expansion growth. ERCOT breaks down the adjusted loads by the following seven categories: Base No PV, Data Centers, Crypto, Industrial, Hydrogen, Oil and Gas, PV, where PV stands for photovoltaics, or in other words, solar energy that is converted to electricity. We used ERCOT’s Adjusted Load Forecast from the <a href="https://www.ercot.com/files/docs/2025/04/08/2025-LTLF-Report.pdf" target="_blank" rel="noopener">April 2025 Board of Directors meeting notes</a>.</p>
+      <p>Based on ERCOT’s adjusted summer peak forecast data, we obtained the value of 22.175 GW, which represents the data center load. Using 2030 forecasts, we would be able to simulate the forecasted data center demand in an open-source software Vatic, which is based on Lawrence Livermore National Lab’s grid software Prescient. The Texas A&M synthetic grid covers ERCOT’s geographic footprint and contains the generators with the fuel types of Nuclear, Wind, Coal, Solar, Natural Gas and Hydro.</p>
+      <p>Modeling the adjusted load required us to distribute the demand reasonably across the seven thousand buses. A crucial limitation to the modeling of new energy demand lies in the lack of office data center location information. However, we were able to identify 350 data centers in Texas thanks to the commercial <a href="https://www.datacentermap.com/" target="_blank" rel="noopener">Data Center Map website</a>, which lists data centers across the globe, providing valuable information like location, square footage, and peak power.</p>
+      <p>Next, we spread ERCOT data center load prediction across the individual data centers. We classified all data centers as being located in one of the eight ERCOT supply regions: Coast, West, East, North Central, South Central, South, Far West, North. We then ascribed a demand for each data center. For a minor fraction of the data centers, this was easy to accomplish, considering that the Data Center Map listed exactly how much load a particular data center consumes. For the remaining data centers, we had to distribute the load between data centers that either listed their square footage or had no such information listed. 87 (24.86%) of the data centers provided exact loads, 60 (17.14%) data centers listed the square footage, and 203 (58.00%) data centers provided no such information. After subtracting the load for all data centers that listed their loads, we distributed the remaining 20.3 GW’s of ERCOT load across data centers with known and unknown square footage. We weighted the load by square footage for the data centers that provided their square footage and spread the remaining load uniformly across the leftover 203 data centers.</p>
+      <p>The Vatic software takes as input the 2030 grid which contains information about every generator, transmission line, and nodal load in 7,000 locations across the state. Each generator includes information about its startup time as well as fixed and variable costs of production. Each transmission line has a maximum power flow rating. The software also takes in forecast and actual demand as well as forecast and actual production from the solar and wind resources. Using forecasts the system solves a mixed-integer linear program to determine which resources to dispatch at which hours to meet demand at each node throughout the day. We use a 15% reserve requirement to align with ERCOT’s reserve margins. The Vatic software outputs information about the generator dispatch at every location, the power flows through each transmission line, system costs, and a locational marginal price at each of the 7,000 nodes at every hour of every day.</p>
+
+      <h2>One Year Simulation</h2>
+      <p>We ran Vatic on a full-year simulation using a two-day-ahead forecast. For a representative day from each month we plotted a few metrics.</p>
+      <p>We analyze the output from January 17th and July 18th, as they appeared to be most interesting. For these days, we analyzed six metrics: Demand, Renewables Curtailment, Energy Price, Total Costs, Thermal Dispatch, and Renewable Output Dispatch. We define these quantities as follows:</p>
+      <p><strong>Total Cost:</strong> the sum of Variables and Fixed costs + λ × Load Shedding</p>
+      <ol style="margin: 10px 0 16px 20px; color: var(--muted); line-height: 1.7;">
+        <li><strong>Load Shedding:</strong> As described in the “Quantifying Renewables Reliability Risk in Modern and Future Electricity Grids” <a href="https://sircar.princeton.edu/sites/g/files/toruqf5981/files/documents/risk_allocation_v8.pdf" target="_blank" rel="noopener">paper</a>, represents the amount in MWh from the commitment and dispatch which could not be serviced without out-of-market corrections, and λ is a monetary penalty per unit MWh of load shedding ($/MWh). In our experiments, we take λ = $10K/MWh, which is consistent with ERCOT’s price cap that has recently ranged from $5K/MWh to $9K/MWh.</li>
+        <li><strong>Fixed costs:</strong> the operational costs of generators that remain constant regardless of the energy consumption.</li>
+        <li><strong>Variable costs:</strong> the costs that fluctuate based on how much energy is used, including the marginal fuel and start-up costs of dispatched generators.</li>
+      </ol>
+      <p>For each metric, we plotted Business As Usual (BAU) and Data Centers Added data. The former refers to the baseline simulation for the selected day. The latter represents a futuristic simulation with extra 22 GWs of projected data center load added at each hour.</p>
+      <p>When demand increased uniformly throughout the entire day, so did thermal dispatch and total costs, which remained higher in the Data Centers Added scenario as opposed to BAU scenario for the entire day. Energy price experienced lower variability when data centers were added, with a narrower range than in the BAU scenario. Renewable curtailment varied slightly throughout the day, with the highest differences present in the middle of the day. Renewable output dispatch appeared to have been relatively unaffected.</p>
+      <p>Similarly to January, July experienced a significantly lower variability and range in energy price in the Data Center Addition scenario as opposed to the BAU scenario, with overall higher prices. Total costs have gone up significantly, driven by the load shedding penalties that were present when the data center load was factored in. Thermal dispatch have also increased throughout the day in the Data Centers Added scenario compared to the BAU scenario.</p>
+
+      <h2>Without additional supply, data centers could increase electricity prices in Texas by 49% in next five years</h2>
+      <p>Using a synthetic test grid for Texas in 2030, also produced by the group at Texas A&M, which assumes 50% of electricity generation from renewables, we simulated a full year of grid operation. The simulation includes all generation, load, and power flows at each hour of the year. We tested two scenarios: 1.) A baseline case which accounts for the load forecast for Texas in 2030 without data centers, and 2.) A data center case, which adds 22 GW of additional load in the state’s major data centers hotspots, with allocations described in our methodology section.</p>
+      <p>Data centers are typically built near cities, likely for better access to the internet backbone. When studying data center additions, the Vatic software allows us to take into account locational and transmission constraints. High prices often clump together in different sections of the grid.</p>
+
+      <h2>Higher System costs and reliability risk</h2>
+      <p>Under the baseline case, wholesale prices averaged $21.18/MWh. When we added 22 GW of data center load, prices rose to an average of $31.47/MWh, a 49% increase on average. The standard deviation of prices decreased from $9.76/MWh to $7.34/MWh. The variance declined because the higher load in the data center case is met by thermal generation (natural gas and coal). By meeting demand with a higher fraction of thermal generation and lower fraction of variable renewable energy, price variation decreases.</p>
+      <p>In addition to driving up prices, data center additions will increase overall system costs and lead to higher rates of load shedding. Considering the upper-tail conditional value at risk, during the top 5% worst hours costs average $10.7 million in the baseline case and $718.5 million in the data centers cases.</p>
+      <p>In addition to higher costs, data centers greater increase reliability risk for the grid. Under the baseline scenario, only 4 MW of load was shed on average each hour. With the increased demand from data center, load shedding increased to an average of 724 MW per hour. Load shedding occurs when the cost of supplying an addition megawatt of power at a particular node would exceed $10,000.</p>
+
+      <h2>Different levels of load</h2>
+      <p>While the Texas grid operator projects 22 GW of additional data center load by 2030, the actual amount is uncertain and will depend of the success of tech companies and AI as well as the ability to interconnect the data centers. Because of this uncertainty, we varied the amount of data center additions from 5 GW to 25 GW to see how different levels of new load impacted the system.</p>
+      <p>Average price increased as more load was added to the grid. However, with each additional 5 GWs of load, the subsequent increase in price became smaller. This observation is reflected in the graph’s increasing, concave down shape. Total costs also increased as more load was added to the grid. Surprisingly, when 5 GWs of load were added to the grid, lowest average total costs were obtained. We believe that with a small load addition more thermal generation was used to supply the grid, resulting in less load shedding. Since load shedding is the major driving factor of total costs, a reduction in load shedding resulted in lower average total cost.</p>
+
+      <h2>Demand response with data centers</h2>
+      <p>Can data centers be used as flexible resources to reduce their impact and support the system?</p>
+      <h3>Background</h3>
+      <p>As we saw in the previous sections, a sudden growth in data center demand without an adequate buildout of supply will dramatically raise prices and system costs. One approach to supporting the grid as demand increases is demand response and load side flexibility. These technologies may play a much larger role for the grid in the future. One form of load-side flexibility is a virtual power plant (VPP). Companies can aggregate and control many smaller distributed resources such as electric vehicles or home heating. They can control these technologies and turn off their load during the hours when electricity supply is tight.</p>
+      <p>Data centers too may perform demand response. Recent research as part of <a href="https://dcflex.sf.epri.com/" target="_blank" rel="noopener">EPRI’s DCFlex initiative</a> in partnership with Nvidia’s Emerald AI <a href="https://arxiv.org/abs/2507.00909" target="_blank" rel="noopener">has shown</a> that software tools can control data center power use during times of peak demand. While the revenue from demand response may not be enough for data centers to participate for economic reasons, it is possible that by being a flexible resource a data center could connect to the grid faster. Data centers are already putting a strain on the grid and raising electricity prices. A report from Monitoring Analytics (PJM’s market monitor) assigned more than $9B of the $14B bill from the 2024 auction to data centers, both in operation and forecasts. As these large loads face more scrutiny for connecting to the grid, their ability to be flexible will be valuable.</p>
+      <p>Using the Vatic software, we performed simulations with 22 GW of additional load in locations with data centers and allowed the data centers to perform demand response.</p>
+      <h3>Demand response implementation</h3>
+      <p>System load in Vatic is distributed across ERCOT’s eight weather zones. We used the locations of current data centers in Texas as a proxy for the locations of future data centers. Using forecasted loads, we constructed load duration curves for each zone. A load duration curve depicts the demand at each hour of the year sorted in descending order of demand level. Next using the allocation of data center load in each region, we calculated how much energy data centers could curtail in each region. Following the estimates provided in Tyler Norris et al.’s “Rethinking Load Growth: Assessing the Potential for Integration of Large Flexible Loads in US Power Systems” <a href="https://nicholasinstitute.duke.edu/publications/rethinking-load-growth" target="_blank" rel="noopener">study</a>, we assumed 0.5% curtailment meaning each data center could expect to be offline for 44 hours of the year. Furthermore, we assumed that during periods of curtailment, data centers could reduce their loads by a maximum of 50% of their total load.</p>
+      <p>On days of forecasted peak demand, we reduced loads up to 0.5% curtailment per data center for the year to create an adjusted load duration curve with curtailment. This procedure resulted in demand curtailment for 72 peak demand hours during the year and no curtailment for the remaining hours. From the perspective of the data centers, each individual data center can only be shut off for up to 44 hours (0.5% of the year). Because not all data centers are shut off at the same time, from the perspective of the grid, demand response occurs for 72 hours. Most demand response occurs during summer months when Texas has larger loads from air conditioning. With data center loads curtailed during peak hours, we re-ran the full year simulation of the Texas 2030 grid.</p>
+      <h3>Findings</h3>
+      <p>First, we demonstrate the effectiveness of demand response on two days in July with unusually high demand peaks. Under our procedure, the demand curtailment is greatest on these peak loads. We observe the following:</p>
+      <ol style="margin: 10px 0 16px 20px; color: var(--muted); line-height: 1.7;">
+        <li>Renewable output dispatch decreased by about 2.3%</li>
+        <li>Thermal dispatch decreased by about 8.7%</li>
+        <li>Total costs went down by about 57%</li>
+        <li>Electricity Price went up by about 5.6%</li>
+        <li>Renewables Curtailment increased by about 11%</li>
+        <li>Peak demand was reduced by about 7%</li>
+      </ol>
+      <p>Note that, counter-intuitively, prices increase slightly when demand response occurs. This is happening due to the significant reduction to load shedding in the modeling software. With less load shed from the system, we see the prices slightly higher. The load shedding difference is taken into account when calculating total costs.</p>
+
+      <h2>Conclusion</h2>
+      <p>Data centers, and their electricity demand, will continue to grow rapidly in the coming years. This new demand will strain the electricity grid as it is projected for 2030 if no action is taken to meet the significant load increase. Tools like demand response can be effective in managing the grid during the hours that matter most, referred to as peak hours, when demand is at its highest. However, the hours when demand response can be deployed represent only a minor fraction of the entire year, less than 1%. To effectively manage forthcoming demand increases, grid operators and other stakeholders will need to adapt practices that can reduce the strain inflicted by data center expansion when demand response is not available. Some of these practices include expanding transmission capacity, especially of renewable resources, and expanding digital control infrastructure, deploying control systems that can effectively and promptly manage loads.</p>
+      <p style="margin-top: 32px;"><a href="https://orfeus.scholar-test.princeton.edu/data-centers-will-strain-grid-even-demand-response" target="_blank" rel="noopener">View original post on ORFEUS Scholar</a></p>
+    </article>
+
+  </div>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <img class="footer-logo" src="assets/PU_mark.png" alt="Princeton University">
+        <div class="footer-brand-text">
+          &copy; 2026 The Trustees of Princeton University
+        </div>
+      </div>
+      <div class="footer-links">
+        <a href="https://www.princeton.edu/content/privacy-notice">Privacy Notice</a>
+        <a href="https://accessibility.princeton.edu">Accessibility</a>
+        <a href="https://inclusive.princeton.edu">Diversity &amp; Non-Discrimination</a>
+      </div>
+    </div>
+  </footer>
+  <script src="reveal.js"></script>
+</body>
+</html>

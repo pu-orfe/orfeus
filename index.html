@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>ORFEUS</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+
+</head>
+<body>
+  <div class="page">
+    <header class="princeton-shell">
+      ORFEUS · Operational Risk Financialization of Electricity Under Stochasticity
+    </header>
+
+    <nav class="main-nav" aria-label="Main navigation">
+      <div class="nav-brand">
+        <img class="nav-brand-princeton" src="assets/PU_mark.png" alt="Princeton University">
+        <span class="nav-brand-sep"></span>
+        <img class="nav-brand-mark" src="assets/orfeus-logo_0.png" alt="ORFEUS logo">
+        <a href="index.html" class="nav-link nav-link--primary">ORFEUS</a>
+      </div>
+      <div class="nav-links">
+<div class="nav-item nav-item--collapsible">
+          <a href="papers.html" class="nav-link">Papers</a>
+        </div>
+        <div class="nav-item">
+          <a href="people.html" class="nav-link">People</a>
+        </div>
+        <div class="nav-item">
+          <a href="blogs.html" class="nav-link">Blog</a>
+        </div>
+        <div class="nav-item nav-item--collapsible">
+          <a href="data-visualization.html" class="nav-link">Data Visualization ▾</a>
+          <div class="nav-dropdown">
+            <a href="data-visualization-scenarios.html">Scenarios Visualization</a>
+            <a href="data-visualization-reliability.html">Reliability Cost Index</a>
+            <a href="data-visualization-lmp.html">LMP Geographical Visualization</a>
+          </div>
+        </div>
+        <div class="nav-item nav-item--collapsible">
+          <a href="data-download.html" class="nav-link">Data Download</a>
+        </div>
+        <div class="nav-item nav-item--collapsible">
+          <a href="arpa-e-poster-2024.html" class="nav-link">ARPA‑E Poster</a>
+        </div>
+        <div class="nav-item nav-item--more">
+          <a href="#" class="nav-link">More ▾</a>
+          <div class="nav-dropdown">
+            <a href="papers.html">Papers</a>
+            <a href="blogs.html">Blog</a>
+            <a href="data-visualization.html">Data Visualization</a>
+            <a href="data-download.html">Data Download</a>
+            <a href="arpa-e-poster-2024.html">ARPA‑E Poster</a>
+          </div>
+        </div>
+        <div class="nav-item">
+          <a href="login.html" class="nav-link nav-link--cta">Log in</a>
+        </div>
+      </div>
+    </nav>
+
+    <section class="reveal">
+      <div class="card card-accent">
+        <div class="card-accent-label">ORFEUS</div>
+        <h3><span class="orfeus-initial">O</span>perational <span class="orfeus-initial">R</span>isk <span class="orfeus-initial">F</span>inancialization of <span class="orfeus-initial">E</span>lectricity <span class="orfeus-initial">U</span>nder <span class="orfeus-initial">S</span>tochasticity</h3>
+        <p>
+          ORFEUS is a research platform that measures how uncertainty in demand, wind,
+          and solar affects system costs and reliability. It provides transparent,
+          quantitative tools to help operators and policymakers plan a cost-effective
+          and reliable electricity transition.
+        </p>
+      </div>
+    </section>
+
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-orbit"></div>
+      <!-- HERO MODE: set to "video" for scroll-animated video, "image" for static picture -->
+      <div class="hero-photo-wrapper" data-hero-mode="image">
+        <video
+          class="hero-photo hero-photo--video"
+          src="assets/upscaled-video.mp4"
+          muted
+          playsinline
+          preload="auto"
+        ></video>
+        <img
+          class="hero-photo hero-photo--image"
+          src="assets/windturbine.png"
+          alt="Solar panels, wind turbines, batteries, and transmission lines at sunset."
+        />
+      </div>
+      <div class="hero-inner">
+        <div>
+          <div class="hero-eyebrow">About the Project</div>
+          <h1 id="hero-title" class="hero-title">
+            Quantifying <span>operational risk</span> in renewable electricity systems
+          </h1>
+          <h2 style="font-size:1.1rem; margin-bottom:10px;">Objectives</h2>
+          <p class="hero-tagline">
+            Modern electricity markets face new sources of risk as renewables footprint
+            increases, and price formation in the traditional sense will ultimately be
+            subordinated to reliability quantification. The ORFEUS platform ascribes risk
+            and costs to each asset's contribution to system operational cost. Its major
+            components include:
+          </p>
+          <ul style="margin: 10px 0 16px 20px; color: var(--muted); font-size: 0.9rem; line-height: 1.8;">
+            <li>Nodal load and generation scenarios</li>
+            <li>Analysis of system operation costs</li>
+            <li>Risk allocation and construction of system risk indices</li>
+            <li>Securitization and risk transfer</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="reveal">
+      <h2>Texas 2030 grid</h2>
+      <div class="figure-card" style="max-width: 50%; margin: 0 auto;">
+        <img src="assets/Texas2030_map.gif" alt="Texas 2030 CVaR allocation map" style="width: 100%; height: auto;">
+      </div>
+    </section>
+
+    <section class="reveal">
+      <h2>A Stochastic Model Capturing Correlations</h2>
+      <p class="lead">
+        Renewable energy resources reduce carbon footprint and marginal cost, but also introduce
+        risk to the grid that is not fully accounted for under current operational paradigms.
+        The fulcrum of the ORFEUS platform is a set of asset-specific modules which calibrate
+        stochastic models of the joint behavior of forecasted and actual production, tailored to
+        wind, solar and load. Models are linked through a high-dimensional correlation constructor
+        which renders spatial and temporal correlation structure tractable via LASSO-based methods
+        and parametric representations of locational correlation structure (Gaussian Random Fields).
+        The last figure shows examples of graphical LASSO correlation effects for NYISO and ERCOT
+        zonal load forecast errors.
+      </p>
+      <div class="figure-grid reveal-children">
+        <div class="figure-card">
+          <img src="assets/correlation1.jpg" alt="Correlation visualization 1">
+        </div>
+        <div class="figure-card">
+          <img src="assets/correlation2.jpg" alt="Correlation visualization 2">
+        </div>
+        <div class="figure-card">
+          <img src="assets/correlation3.jpg" alt="LASSO correlation effects for NYISO and ERCOT">
+        </div>
+      </div>
+    </section>
+
+    <section class="reveal">
+      <div style="display:flex; gap:24px; align-items:center;">
+        <div style="flex:1;">
+          <h2>Financial Risk Measures Reliability Indices</h2>
+          <p class="lead">
+            Zero-marginal-cost assets are usually guaranteed to be committed even if they create
+            potentially costly externalities due to uncertain production. The ORFEUS risk-based cost
+            module rigorously decomposes the results of the simulation batch into reliability costs
+            by asset and zone using coherent risk measure methodologies ensuring that system operations
+            allocate realized costs equitably.
+          </p>
+        </div>
+        <div class="figure-card" style="width:250px; min-width:250px;">
+          <img src="assets/finrisk.jpg" alt="Financial Risk Measures Reliability Indices">
+        </div>
+      </div>
+    </section>
+
+    <section class="reveal">
+      <h2>How the ORFEUS platform works</h2>
+      <p class="lead">
+        ORFEUS links renewable variability, system operation, and financial risk from
+        asset-level models through to risk indices and hedging products.
+      </p>
+      <div class="grid-3 reveal-children">
+        <div class="card">
+          <div class="tag">Step 1</div>
+          <h3>Generate scenarios</h3>
+          <p>
+            Calibrate stochastic models of the joint behavior of forecasts and actuals,
+            tailored to wind, solar, and load at each node.
+          </p>
+        </div>
+        <div class="card">
+          <div class="tag">Step 2</div>
+          <h3>Simulate system operation</h3>
+          <p>
+            Run large batches of day-ahead scenarios through security-constrained unit
+            commitment and economic dispatch.
+          </p>
+        </div>
+        <div class="card">
+          <div class="tag">Step 3</div>
+          <h3>Attribute risk and cost</h3>
+          <p>
+            Decompose realized system costs using coherent risk measures and attribute
+            them to assets and zones.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="data-tools" class="reveal">
+      <h2>Data &amp; tools</h2>
+      <p class="lead">
+        Explore ORFEUS visualizations, risk indices, and downloadable datasets.
+      </p>
+      <div class="grid-3 reveal-children">
+        <div class="card">
+          <h3>Interactive visualizations</h3>
+          <p>Scenario and risk visualizations in a browser-based interface.</p>
+        </div>
+        <div class="card">
+          <h3>Downloadable datasets</h3>
+          <p>Scenario data, risk indices, correlation matrices, and more.</p>
+        </div>
+        <div class="card">
+          <h3>Methods &amp; documentation</h3>
+          <p>Technical descriptions of models, calibration, and risk allocation.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="flyer" class="reveal">
+      <h2>Printable project overview</h2>
+      <p class="lead">
+        Download a concise overview of the ORFEUS project, suitable for briefings and handouts.
+      </p>
+      <a href="#" class="btn btn-primary">Download ORFEUS flyer (placeholder)</a>
+    </section>
+
+  </div>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <img class="footer-logo" src="assets/PU_mark.png" alt="Princeton University">
+        <div class="footer-brand-text">
+          &copy; 2026 The Trustees of Princeton University
+        </div>
+      </div>
+      <div class="footer-links">
+        <a href="https://www.princeton.edu/content/privacy-notice">Privacy Notice</a>
+        <a href="https://accessibility.princeton.edu">Accessibility</a>
+        <a href="https://inclusive.princeton.edu">Diversity &amp; Non-Discrimination</a>
+      </div>
+    </div>
+  </footer>
+  <script src="reveal.js"></script>
+  <script>
+    (() => {
+      const nav = document.querySelector('.main-nav');
+      if (!nav) return;
+      nav.classList.add('nav-large');
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 40) {
+          nav.classList.remove('nav-large');
+        } else {
+          nav.classList.add('nav-large');
+        }
+      }, { passive: true });
+    })();
+
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js"></script>
+  <script>
+    (function() {
+      var wrapper = document.querySelector('.hero-photo-wrapper');
+      if (!wrapper || wrapper.getAttribute('data-hero-mode') !== 'video') return;
+      var video = wrapper.querySelector('video.hero-photo--video');
+      if (!video) return;
+
+      function setup() {
+        gsap.registerPlugin(ScrollTrigger);
+        var dur = video.duration || 3.6;
+        var proxy = { t: 0 };
+        gsap.to(proxy, {
+          t: dur,
+          ease: 'none',
+          scrollTrigger: {
+            trigger: '.hero',
+            start: 'top 80%',
+            end: 'bottom top',
+            scrub: 0.3
+          },
+          onUpdate: function() { video.currentTime = proxy.t; }
+        });
+      }
+
+      if (video.readyState >= 1) setup();
+      else video.addEventListener('loadedmetadata', setup);
+    })();
+  </script>
+</body>
+</html>
