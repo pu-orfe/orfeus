@@ -5,7 +5,7 @@
   <title>Data centers will strain the grid (even with demand response) – ORFEUS</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="assets/css/style.css">
-  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link rel="icon" type="image/png" href="assets/images/favicon.png">
 </head>
 <body>
   <a class="skip-link" href="#main-content">Skip to main content</a>
@@ -16,9 +16,9 @@
 
     <nav class="main-nav" aria-label="Main navigation">
       <div class="nav-brand">
-        <img class="nav-brand-princeton" src="assets/PU_mark.png" alt="Princeton University">
+        <img class="nav-brand-princeton" src="assets/images/PU_mark.png" alt="Princeton University">
         <span class="nav-brand-sep" aria-hidden="true"></span>
-        <img class="nav-brand-mark" src="assets/orfeus-logo_0.png" alt="ORFEUS logo">
+        <img class="nav-brand-mark" src="assets/images/orfeus-logo_0.png" alt="ORFEUS logo">
         <a href="index.html" class="nav-link nav-link--primary">ORFEUS</a>
       </div>
       <div class="nav-links">
@@ -91,19 +91,19 @@
       <p>For each metric, we plotted Business As Usual (BAU) and Data Centers Added data. The former refers to the baseline simulation for the selected day. The latter represents a futuristic simulation with extra 22 GWs of projected data center load added at each hour.</p>
       <p>When demand increased uniformly throughout the entire day, so did thermal dispatch and total costs, which remained higher in the Data Centers Added scenario as opposed to BAU scenario for the entire day. Energy price experienced lower variability when data centers were added, with a narrower range than in the BAU scenario. Renewable curtailment varied slightly throughout the day, with the highest differences present in the middle of the day. Renewable output dispatch appeared to have been relatively unaffected.</p>
       <figure class="article-figure">
-        <img src="assets/data_centers_blog/january-final.jpg" alt="Impact of data center integration on grid operations on January 17, 2030.">
+        <img src="assets/images/data_centers_blog/january-final.jpg" alt="Impact of data center integration on grid operations on January 17, 2030.">
         <figcaption>Figure 1: Impact of Data Center Integration on Grid Operations, January 17, 2030.</figcaption>
       </figure>
       <p>Similarly to January, July experienced a significantly lower variability and range in energy price in the Data Center Addition scenario as opposed to the BAU scenario, with overall higher prices. Total costs have gone up significantly, driven by the load shedding penalties that were present when the data center load was factored in. Thermal dispatch have also increased throughout the day in the Data Centers Added scenario compared to the BAU scenario.</p>
       <figure class="article-figure">
-        <img src="assets/data_centers_blog/july-final.jpg" alt="Effects of data center integration on grid metrics on July 18, 2030.">
+        <img src="assets/images/data_centers_blog/july-final.jpg" alt="Effects of data center integration on grid metrics on July 18, 2030.">
         <figcaption>Figure 2: Effects of Data Center Integration on Grid Metrics, July 18, 2030.</figcaption>
       </figure>
 
       <h2>Without additional supply, data centers could increase electricity prices in Texas by 49% in next five years</h2>
       <p>Using a synthetic test grid for Texas in 2030, also produced by the group at Texas A&M, which assumes 50% of electricity generation from renewables, we simulated a full year of grid operation. The simulation includes all generation, load, and power flows at each hour of the year. We tested two scenarios: 1.) A baseline case which accounts for the load forecast for Texas in 2030 without data centers, and 2.) A data center case, which adds 22 GW of additional load in the state’s major data centers hotspots, with allocations described in our <a href="https://orfeus.scholar-test.princeton.edu/posts/2025/methodology" target="_blank" rel="noopener">methodology</a> section.</p>
       <figure class="article-figure">
-        <img src="assets/data_centers_blog/jul18-hr22.png" alt="Nodal price map of the future Texas grid with and without data center load.">
+        <img src="assets/images/data_centers_blog/jul18-hr22.png" alt="Nodal price map of the future Texas grid with and without data center load.">
         <figcaption>Figure 3: Nodal price map of the future Texas grid with and without 22 GW of new data center load at one hour on July 18, 2030.</figcaption>
       </figure>
       <p>Data centers are typically built near cities, likely for better access to the internet backbone. When studying data center additions, the Vatic software allows us to take into account locational and transmission constraints. High prices often clump together in different sections of the grid.</p>
@@ -111,12 +111,12 @@
       <h2>Higher System costs and reliability risk</h2>
       <p>Under the baseline case, wholesale prices averaged $21.18/MWh. When we added 22 GW of data center load, prices rose to an average of $31.47/MWh, a 49% increase on average. The standard deviation of prices decreased from $9.76/MWh to $7.34/MWh. The variance declined because the higher load in the data center case is met by thermal generation (natural gas and coal). By meeting demand with a higher fraction of thermal generation and lower fraction of variable renewable energy, price variation decreases.</p>
       <figure class="article-figure">
-        <img src="assets/data_centers_blog/price-distribution.png" alt="Distribution of yearly prices under baseline and data center scenarios.">
+        <img src="assets/images/data_centers_blog/price-distribution.png" alt="Distribution of yearly prices under baseline and data center scenarios.">
         <figcaption>Figure 4: Distributions of hourly prices in 2030 under the baseline case and the data center case.</figcaption>
       </figure>
       <p>In addition to driving up prices, data center additions will increase overall system costs and lead to higher rates of load shedding. Considering the upper-tail conditional value at risk, during the top 5% worst hours costs average $10.7 million in the baseline case and $718.5 million in the data centers cases.</p>
       <figure class="article-figure">
-        <img src="assets/data_centers_blog/total-costs-boxplot.png" alt="Box plot of total system costs under baseline and data center scenarios.">
+        <img src="assets/images/data_centers_blog/total-costs-boxplot.png" alt="Box plot of total system costs under baseline and data center scenarios.">
         <figcaption>Figure 5: Box and whisker plot showing that both the average and spread of total system costs increase significantly with 22 GW of data center additions.</figcaption>
       </figure>
       <p>In addition to higher costs, data centers greater increase reliability risk for the grid. Under the baseline scenario, only 4 MW of load was shed on average each hour. With the increased demand from data center, load shedding increased to an average of 724 MW per hour. Load shedding occurs when the cost of supplying an addition megawatt of power at a particular node would exceed $10,000.</p>
@@ -125,12 +125,12 @@
       <p>While the Texas grid operator projects 22 GW of additional data center load by 2030, the actual amount is uncertain and will depend of the success of tech companies and AI as well as the ability to interconnect the data centers. Because of this uncertainty, we varied the amount of data center additions from 5 GW to 25 GW to see how different levels of new load impacted the system.</p>
       <p>Average price increased as more load was added to the grid. However, with each additional 5 GWs of load, the subsequent increase in price became smaller. This observation is reflected in the graph’s increasing, concave down shape.</p>
       <figure class="article-figure">
-        <img src="assets/data_centers_blog/total-price-vs-gw.png" alt="Average yearly electricity price versus added data center load.">
+        <img src="assets/images/data_centers_blog/total-price-vs-gw.png" alt="Average yearly electricity price versus added data center load.">
         <figcaption>Figure 6: Impact of added data center load on yearly average electricity prices.</figcaption>
       </figure>
       <p>Total costs also increased as more load was added to the grid. Surprisingly, when 5 GWs of load were added to the grid, lowest average total costs were obtained. We believe that with a small load addition more thermal generation was used to supply the grid, resulting in less load shedding. Since load shedding is the major driving factor of total costs, a reduction in load shedding resulted in lower average total cost.</p>
       <figure class="article-figure">
-        <img src="assets/data_centers_blog/total-cost-vs-gw.png" alt="Average total system cost versus added data center load.">
+        <img src="assets/images/data_centers_blog/total-cost-vs-gw.png" alt="Average total system cost versus added data center load.">
         <figcaption>Figure 7: Average total system cost versus added data center load.</figcaption>
       </figure>
 
@@ -143,27 +143,27 @@
       <h3>Demand response implementation</h3>
       <p>System load in Vatic is distributed across ERCOT’s eight weather zones. We used the locations of current data centers in Texas as a proxy for the locations of future data centers.</p>
       <figure class="article-figure">
-        <img src="assets/data_centers_blog/load-zones.png" alt="Eight weather zones in the Texas electricity system.">
+        <img src="assets/images/data_centers_blog/load-zones.png" alt="Eight weather zones in the Texas electricity system.">
         <figcaption>Figure 8: Eight weather zones in the Texas electricity system. Source: ERCOT.</figcaption>
       </figure>
       <p>Using forecasted loads, we constructed load duration curves for each zone. A load duration curve depicts the demand at each hour of the year sorted in descending order of demand level.</p>
       <figure class="article-figure">
-        <img src="assets/data_centers_blog/load-duration-curve.png" alt="Load duration curve for the coast region in 2030.">
+        <img src="assets/images/data_centers_blog/load-duration-curve.png" alt="Load duration curve for the coast region in 2030.">
         <figcaption>Figure 9: Load duration curve for the coast region in 2030.</figcaption>
       </figure>
       <p>Next using the allocation of data center load in each region, we calculated how much energy data centers could curtail in each region. Following the estimates provided in Tyler Norris et al.’s “Rethinking Load Growth: Assessing the Potential for Integration of Large Flexible Loads in US Power Systems” <a href="https://nicholasinstitute.duke.edu/publications/rethinking-load-growth" target="_blank" rel="noopener">study</a>, we assumed 0.5% curtailment meaning each data center could expect to be offline for 44 hours of the year. Furthermore, we assumed that during periods of curtailment, data centers could reduce their loads by a maximum of 50% of their total load.</p>
       <p>On days of forecasted peak demand, we reduced loads up to 0.5% curtailment per data center for the year to create an adjusted load duration curve with curtailment.</p>
       <figure class="article-figure">
-        <img src="assets/data_centers_blog/selected-regions-load-duration-curves.png" alt="Load duration curves for three regions with and without demand response.">
+        <img src="assets/images/data_centers_blog/selected-regions-load-duration-curves.png" alt="Load duration curves for three regions with and without demand response.">
         <figcaption>Figure 10: Load duration curves for three of eight regions with demand response and without demand response.</figcaption>
       </figure>
       <p>This procedure resulted in demand curtailment for 72 peak demand hours during the year and no curtailment for the remaining hours. From the perspective of the data centers, each individual data center can only be shut off for up to 44 hours (0.5% of the year). Because not all data centers are shut off at the same time, from the perspective of the grid, demand response occurs for 72 hours. Most demand response occurs during summer months when Texas has larger loads from air conditioning.</p>
       <figure class="article-figure">
-        <img src="assets/data_centers_blog/hourly-curtailment-by-region.png" alt="Hourly data center curtailment as a fraction of regional load.">
+        <img src="assets/images/data_centers_blog/hourly-curtailment-by-region.png" alt="Hourly data center curtailment as a fraction of regional load.">
         <figcaption>Figure 11: Hourly data center curtailment as a fraction of regional load.</figcaption>
       </figure>
       <figure class="article-figure">
-        <img src="assets/data_centers_blog/demand-distribution.png" alt="Demand distribution with and without data center demand response.">
+        <img src="assets/images/data_centers_blog/demand-distribution.png" alt="Demand distribution with and without data center demand response.">
         <figcaption>Figure 12: Distribution of demand for each hour of the year with and without data center demand response.</figcaption>
       </figure>
       <p>With data center loads curtailed during peak hours, we re-ran the full year simulation of the Texas 2030 grid.</p>
@@ -180,11 +180,11 @@
       <p>Note that, counter-intuitively, prices increase slightly when demand response occurs. This is happening due to the significant reduction to load shedding in the modeling software. With less load shed from the system, we see the prices slightly higher. The load shedding difference is taken into account when calculating total costs.</p>
       <p>The full results for 72 demand response hours are provided in table 1 on the <a href="https://orfeus.scholar-test.princeton.edu/full-year-demand-response-effect" target="_blank" rel="noopener">following page</a>.</p>
       <figure class="article-figure">
-        <img src="assets/data_centers_blog/july20-demand-response.jpg" alt="Impact of demand response on grid metrics on July 20, 2030.">
+        <img src="assets/images/data_centers_blog/july20-demand-response.jpg" alt="Impact of demand response on grid metrics on July 20, 2030.">
         <figcaption>Figure 13: Impact of Demand Response on Grid Metrics, July 20, 2030.</figcaption>
       </figure>
       <figure class="article-figure">
-        <img src="assets/data_centers_blog/july23-demand-response.jpg" alt="Grid performance under data center expansion and demand response on July 23, 2030.">
+        <img src="assets/images/data_centers_blog/july23-demand-response.jpg" alt="Grid performance under data center expansion and demand response on July 23, 2030.">
         <figcaption>Figure 14: Grid Performance under Data Center Expansion and Demand Response, July 23, 2030.</figcaption>
       </figure>
 
@@ -197,7 +197,7 @@
   <footer class="site-footer">
     <div class="footer-inner">
       <div class="footer-brand">
-        <img class="footer-logo" src="assets/PU_mark.png" alt="Princeton University">
+        <img class="footer-logo" src="assets/images/PU_mark.png" alt="Princeton University">
         <div class="footer-brand-text">
           &copy; 2026 The Trustees of Princeton University
         </div>
