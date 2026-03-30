@@ -1,0 +1,24 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# AI agent / orchestration files
+.ralph/
+ralph.yml
+PROMPT.md
+
+# Browser-saved page (Drupal export, not part of site)
+Data centers will strain the grid (even with demand response) _ ORFEUS.html
+Data centers will strain the grid (even with demand response) _ ORFEUS_files/
+
+# Editor and IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Thumbnails
+Thumbs.db
