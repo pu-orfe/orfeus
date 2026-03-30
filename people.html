@@ -8,7 +8,8 @@
   <link rel="icon" type="image/png" href="assets/favicon.png">
 </head>
 <body>
-  <div class="page">
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <main class="page" id="main-content">
     <header class="princeton-shell">
       ORFEUS · Operational Risk Financialization of Electricity Under Stochasticity
     </header>
@@ -16,7 +17,7 @@
     <nav class="main-nav" aria-label="Main navigation">
       <div class="nav-brand">
         <img class="nav-brand-princeton" src="assets/PU_mark.png" alt="Princeton University">
-        <span class="nav-brand-sep"></span>
+        <span class="nav-brand-sep" aria-hidden="true"></span>
         <img class="nav-brand-mark" src="assets/orfeus-logo_0.png" alt="ORFEUS logo">
         <a href="index.html" class="nav-link nav-link--primary">ORFEUS</a>
       </div>
@@ -31,7 +32,7 @@
           <a href="blogs.html" class="nav-link">Blog</a>
         </div>
         <div class="nav-item nav-item--collapsible">
-          <a href="data-visualization.html" class="nav-link">Data Visualization ▾</a>
+          <a href="data-visualization.html" class="nav-link" aria-haspopup="true">Data Visualization ▾</a>
           <div class="nav-dropdown">
             <a href="data-visualization-scenarios.html">Scenarios Visualization</a>
             <a href="data-visualization-reliability.html">Reliability Cost Index</a>
@@ -42,20 +43,17 @@
           <a href="data-download.html" class="nav-link">Data Download</a>
         </div>
         <div class="nav-item nav-item--collapsible">
-          <a href="arpa-e-poster-2024.html" class="nav-link">ARPA‑E Poster</a>
+          <a href="assets/arpa_e_poster_2024/ARPA_E_poster_2024.pdf" class="nav-link">ORFEUS Poster</a>
         </div>
         <div class="nav-item nav-item--more">
-          <a href="#" class="nav-link">More ▾</a>
+          <a href="#" class="nav-link" aria-haspopup="true">More ▾</a>
           <div class="nav-dropdown">
             <a href="papers.html">Papers</a>
             <a href="blogs.html">Blog</a>
             <a href="data-visualization.html">Data Visualization</a>
             <a href="data-download.html">Data Download</a>
-            <a href="arpa-e-poster-2024.html">ARPA‑E Poster</a>
+            <a href="assets/arpa_e_poster_2024/ARPA_E_poster_2024.pdf">ORFEUS Poster</a>
           </div>
-        </div>
-        <div class="nav-item">
-          <a href="login.html" class="nav-link nav-link--cta">Log in</a>
         </div>
       </div>
     </nav>
@@ -129,17 +127,38 @@
       </div>
     </section>
 
-    <section id="research-staff" class="reveal">
-      <h2>Research Staff</h2>
-      <p class="lead">Research staff profiles will be added here.</p>
-    </section>
-
     <section id="advisers" class="reveal">
-      <h2>Advisers</h2>
-      <p class="lead">Adviser profiles will be added here.</p>
+      <h2>Partners</h2>
+      <p class="lead">
+        We work closely with <a href="https://www.loudonenergy.com/">Loudon Energy Analytics</a>.
+      </p>
+      <div class="people-grid reveal-children">
+        <div class="pi-card">
+          <img
+            class="pi-photo"
+            src="https://www.loudonenergy.com/wp-content/uploads/2024/11/Rana-Mukerji-225x300.jpg"
+            alt="Rana Mukerji"
+          >
+          <div class="pi-info">
+            <h3>Rana Mukerji</h3>
+            <div class="pi-title">Founder &amp; President, Loudon Energy Analytics</div>
+            <div class="pi-bio">
+              <p>
+                Rana Mukerji is an industry leader and one of the top global experts in wholesale electricity market design. He founded Loudon Energy Analytics to provide electricity market analytics and advisory services for companies navigating a rapidly changing market landscape.
+              </p>
+              <p>
+                Prior to founding Loudon Energy Analytics, from 2006 to 2024, Mukerji was Senior Vice President of Market Structures for the New York Independent System Operator, where he helped build the next generation of electric markets. That work included adapting market design and infrastructure for high levels of renewable energy, integrating energy storage, and incorporating distributed resources into markets.
+              </p>
+              <p>
+                Before joining the NYISO, Mukerji spent seven years with ABB in Raleigh and Zurich, where he served as Vice President and General Manager and Group Senior Vice President. At ABB, he had global responsibility for the company&rsquo;s Power Technology Asset Management and Consulting services and also led ABB&rsquo;s global Utility Partner Business.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
-  </div>
+  </main>
 
   <footer class="site-footer">
     <div class="footer-inner">

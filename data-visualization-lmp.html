@@ -8,7 +8,8 @@
   <link rel="icon" type="image/png" href="assets/favicon.png">
 </head>
 <body>
-  <div class="page">
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <main class="page" id="main-content">
     <header class="princeton-shell">
       ORFEUS · Operational Risk Financialization of Electricity Under Stochasticity
     </header>
@@ -16,7 +17,7 @@
     <nav class="main-nav" aria-label="Main navigation">
       <div class="nav-brand">
         <img class="nav-brand-princeton" src="assets/PU_mark.png" alt="Princeton University">
-        <span class="nav-brand-sep"></span>
+        <span class="nav-brand-sep" aria-hidden="true"></span>
         <img class="nav-brand-mark" src="assets/orfeus-logo_0.png" alt="ORFEUS logo">
         <a href="index.html" class="nav-link nav-link--primary">ORFEUS</a>
       </div>
@@ -31,7 +32,7 @@
           <a href="blogs.html" class="nav-link">Blog</a>
         </div>
         <div class="nav-item nav-item--collapsible">
-          <a href="data-visualization.html" class="nav-link">Data Visualization ▾</a>
+          <a href="data-visualization.html" class="nav-link" aria-haspopup="true">Data Visualization ▾</a>
           <div class="nav-dropdown">
             <a href="data-visualization-scenarios.html">Scenarios Visualization</a>
             <a href="data-visualization-reliability.html">Reliability Cost Index</a>
@@ -42,34 +43,63 @@
           <a href="data-download.html" class="nav-link">Data Download</a>
         </div>
         <div class="nav-item nav-item--collapsible">
-          <a href="arpa-e-poster-2024.html" class="nav-link">ARPA‑E Poster</a>
+          <a href="assets/arpa_e_poster_2024/ARPA_E_poster_2024.pdf" class="nav-link">ORFEUS Poster</a>
         </div>
         <div class="nav-item nav-item--more">
-          <a href="#" class="nav-link">More ▾</a>
+          <a href="#" class="nav-link" aria-haspopup="true">More ▾</a>
           <div class="nav-dropdown">
             <a href="papers.html">Papers</a>
             <a href="blogs.html">Blog</a>
             <a href="data-visualization.html">Data Visualization</a>
             <a href="data-download.html">Data Download</a>
-            <a href="arpa-e-poster-2024.html">ARPA‑E Poster</a>
+            <a href="assets/arpa_e_poster_2024/ARPA_E_poster_2024.pdf">ORFEUS Poster</a>
           </div>
-        </div>
-        <div class="nav-item">
-          <a href="login.html" class="nav-link nav-link--cta">Log in</a>
         </div>
       </div>
     </nav>
 
 
     <section>
-      <h1>Data Visualization (detail)</h1>
+      <h1>Locational Marginal Prices</h1>
       <p class="lead">
-        Placeholder for a specific visualization page (e.g., scenarios,
-        reliability index, or LMP maps).
+        Simulation of real-world power grid operations to generate realistic locational marginal prices (LMPs) to reflect the balance between supply and demand at each bus.
       </p>
+      <ul class="list">
+        <li>Use Texas 7k Grid with a rich set of generators of various types including renewables.</li>
+        <li>Run unit commitment and economic dispatch through advanced optimization.</li>
+        <li>Calculate LMPs to reflect the balance of supply and demand.</li>
+      </ul>
+      <p>
+        We design and develop the software <a href="https://github.com/PrincetonUniversity/Vatic/tree/v0.4.0-a2" target="_blank" rel="noopener">Vatic</a> to efficiently simulate grid operations, and the software can be customized to any grid.
+      </p>
+      <h2>LMP Geographic Plots</h2>
+      <p>
+        The interactive plot below helps explore how LMPs distribute geographically. Select a day and hour to view the LMP distribution for that hour.
+      </p>
+      <ul class="list">
+        <li>Each bus is labeled as a dot, with dot size and color warmth proportional to the magnitude of LMP.</li>
+        <li>Buses with negative prices are emphasized with the largest size dots.</li>
+        <li>Congested transmission lines (over 98% capacity) are shown as red segments when present.</li>
+      </ul>
+      <p>
+        Interactive tips: drag to a region of interest and use the mouse wheel to zoom. Hover on bus dots to see bus name, LMP, and demand. Hover on red line segments to see line ID, congestion ratio, and connected bus IDs. Hover near the top-right of the plot to reveal controls. Click legend items to toggle corresponding layers.
+      </p>
+      <div class="card" style="margin-top:14px;">
+        <div class="card-actions" style="margin-top:0;">
+          <a href="https://dataviz.orfeus.princeton.edu/lmpplot" target="_blank" rel="noopener">Open visualization in a new tab</a>
+        </div>
+      </div>
+      <div class="visualization-frame-wrap" style="margin-top:18px;">
+        <iframe
+          class="visualization-frame"
+          src="https://dataviz.orfeus.princeton.edu/lmpplot"
+          title="LMP Geographical Visualization"
+          loading="lazy"
+        ></iframe>
+      </div>
     </section>
 
-  </div>
+  </main>
 
   <footer class="site-footer">
     <div class="footer-inner">

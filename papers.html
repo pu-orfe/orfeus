@@ -8,7 +8,8 @@
   <link rel="icon" type="image/png" href="assets/favicon.png">
 </head>
 <body>
-  <div class="page">
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <main class="page" id="main-content">
     <header class="princeton-shell">
       ORFEUS · Operational Risk Financialization of Electricity Under Stochasticity
     </header>
@@ -16,7 +17,7 @@
     <nav class="main-nav" aria-label="Main navigation">
       <div class="nav-brand">
         <img class="nav-brand-princeton" src="assets/PU_mark.png" alt="Princeton University">
-        <span class="nav-brand-sep"></span>
+        <span class="nav-brand-sep" aria-hidden="true"></span>
         <img class="nav-brand-mark" src="assets/orfeus-logo_0.png" alt="ORFEUS logo">
         <a href="index.html" class="nav-link nav-link--primary">ORFEUS</a>
       </div>
@@ -31,7 +32,7 @@
           <a href="blogs.html" class="nav-link">Blog</a>
         </div>
         <div class="nav-item nav-item--collapsible">
-          <a href="data-visualization.html" class="nav-link">Data Visualization ▾</a>
+          <a href="data-visualization.html" class="nav-link" aria-haspopup="true">Data Visualization ▾</a>
           <div class="nav-dropdown">
             <a href="data-visualization-scenarios.html">Scenarios Visualization</a>
             <a href="data-visualization-reliability.html">Reliability Cost Index</a>
@@ -42,20 +43,17 @@
           <a href="data-download.html" class="nav-link">Data Download</a>
         </div>
         <div class="nav-item nav-item--collapsible">
-          <a href="arpa-e-poster-2024.html" class="nav-link">ARPA‑E Poster</a>
+          <a href="assets/arpa_e_poster_2024/ARPA_E_poster_2024.pdf" class="nav-link">ORFEUS Poster</a>
         </div>
         <div class="nav-item nav-item--more">
-          <a href="#" class="nav-link">More ▾</a>
+          <a href="#" class="nav-link" aria-haspopup="true">More ▾</a>
           <div class="nav-dropdown">
             <a href="papers.html">Papers</a>
             <a href="blogs.html">Blog</a>
             <a href="data-visualization.html">Data Visualization</a>
             <a href="data-download.html">Data Download</a>
-            <a href="arpa-e-poster-2024.html">ARPA‑E Poster</a>
+            <a href="assets/arpa_e_poster_2024/ARPA_E_poster_2024.pdf">ORFEUS Poster</a>
           </div>
-        </div>
-        <div class="nav-item">
-          <a href="login.html" class="nav-link nav-link--cta">Log in</a>
         </div>
       </div>
     </nav>
@@ -63,15 +61,11 @@
 
     <section class="reveal">
       <h1>Papers</h1>
-      <p class="lead">
-        Formal research outputs from the ORFEUS project on system risk, cost
-        allocation, and market design.
-      </p>
 
       <div class="card" style="margin-top:14px;">
-        <div class="tag">Journal Article · 2024</div>
-        <h3>Quantifying Renewables Reliability Risk in Modern and Future Electricity Grids</h3>
+        <h3><a href="https://sircar.princeton.edu/document/541" target="_blank" rel="noopener">Quantifying Renewables Reliability Risk in Modern and Future Electricity Grids</a></h3>
         <p><strong>Authors:</strong> Arvind Shrivats, Ronnie Sircar, Xinshuo Yang</p>
+        <p><strong>Publication:</strong> The Journal of Energy Markets, Volume 17, Number 3, September 2025.</p>
         <p style="margin-top:10px;">
           We propose and implement a methodology to quantify, allocate and account for the risk
           introduced to electricity production from the unpredictable intermittency of renewable
@@ -90,52 +84,46 @@
           thereby re-optimize unit commitment and economic dispatch of assets taking into account the
           probabilistic nature of supply from renewables.
         </p>
-        <div class="card-actions" style="margin-top:12px;">
-          <a href="https://ssrn.com/abstract=4917976" target="_blank">SSRN →</a> ·
-          <a href="https://scholar.google.com/scholar?as_q=%22Quantifying+Renewables+Reliability+Risk+in+Modern+and+Future+Electricity+Grids%22" target="_blank">Google Scholar →</a>
-        </div>
       </div>
 
       <div class="card" style="margin-top:14px;">
-        <div class="tag">Journal Article · 2024</div>
-        <h3>Quantifying Renewables Reliability Risk in Modern and Future Electricity Grids</h3>
-        <p><strong>Authors:</strong> Arvind Shrivats, Ronnie Sircar, Xinshuo Yang</p>
+        <h3><a href="https://arxiv.org/abs/2407.04081" target="_blank" rel="noopener">Coincident Peak Prediction for Capacity and Transmission Charge Reduction</a></h3>
+        <p><strong>Authors:</strong> René Carmona, Xinshuo Yang, Claire Zeng</p>
+        <p><strong>Publication:</strong> Published online 24 March 2026 in Energy Systems.</p>
         <p style="margin-top:10px;">
-          We propose and implement a methodology to quantify, allocate and account for the risk
-          introduced to electricity production from the unpredictable intermittency of renewable
-          resources such and wind and solar. Incorporating this stochasticity into grid risk
-          management is viewed by the industry (which has remained almost entirely tethered to a
-          deterministic viewpoint, and in particular to weather forecasts) as increasingly crucial,
-          as we aim for greater renewables penetration to reduce dependence on carbon-emitting fuels.
-          Our methodology involves feeding Monte Carlo simulations of solar, wind and demand into a
-          grid optimization software that emulates the performance and costs of the Texas electricity
-          grid. This outputs a distribution of running costs, from which we can numerically extract a
-          measure of system (grid) risk. The more challenging part is to allocate this risk back
-          (top down) to the individual renewable assets to assign them a reliability cost. This
-          adapts existing approaches for the risk allocation problem related to Shapley values, but
-          is computationally intensive. We show results, project to potential future grids, and
-          propose a way to incorporate the reliability costs back into the day ahead bid curve and
-          thereby re-optimize unit commitment and economic dispatch of assets taking into account the
-          probabilistic nature of supply from renewables.
+          Meeting the ever-growing needs of the power grid requires constant infrastructure enhancement. There are two important aspects for a grid ability to ensure continuous and reliable electricity delivery to consumers: capacity, the maximum amount the system can handle, and transmission, the infrastructure necessary to deliver electricity across the network. These capacity and transmission costs are then allocated to end-users according to the cost causation principle. We study the prediction of coincident peak events from actual load and forecast data across jurisdictions, develop Monte Carlo estimators for CP-day and exact CP-hour prediction, and backtest adaptive-threshold strategies to derive practical implications for Battery Energy Storage System load-curtailment solutions.
         </p>
-        <div class="card-actions" style="margin-top:12px;">
-          <a href="https://ssrn.com/abstract=4917976" target="_blank">SSRN →</a> ·
-          <a href="https://scholar.google.com/scholar?as_q=%22Quantifying+Renewables+Reliability+Risk+in+Modern+and+Future+Electricity+Grids%22" target="_blank">Google Scholar →</a>
-        </div>
       </div>
 
       <div class="card" style="margin-top:14px;">
-        <h3>ARPA‑E Poster (2024)</h3>
-        <p>
-          View the poster locally in the new ORFEUS style. Includes a preview image and the extracted figure/equation assets.
+        <h3><a href="https://arxiv.org/abs/2409.03942" target="_blank" rel="noopener">Maximizing On-Bill Savings through Battery Management Optimization</a></h3>
+        <p><strong>Authors:</strong> René Carmona, Xinshuo Yang, Siddharth Bhela, Claire Zeng</p>
+        <p><strong>Publication:</strong> arXiv:2409.03942, September 2024.</p>
+        <p style="margin-top:10px;">
+          In many power grids, a large portion of energy costs for commercial and industrial consumers are tied to coincident peak load and their own non-coincident peak load. Coincident-peak based charges reflect the allocation of infrastructure upgrades for capacity and transmission, while demand charges penalize the stress on the grid caused by each consumer's peak demand. Microgrids with local generation, controllable loads, and batteries can cut their peak-load contributions and significantly reduce these charges. This paper investigates the optimal planning of microgrid technology for electricity bill reduction by leveraging a scenario generator to incorporate probability estimates of coincident and non-coincident peaks into the optimization problem.
         </p>
-        <div class="card-actions">
-          <a href="arpa-e-poster-2024.html">Open poster page →</a>
-        </div>
+      </div>
+
+      <div class="card" style="margin-top:14px;">
+        <h3><a href="https://sircar.princeton.edu/document/456" target="_blank" rel="noopener">Cost Attribution and Risk-Averse Unit Commitment in Power Grids Using Integrated Gradient</a></h3>
+        <p><strong>Authors:</strong> René Carmona, Ronnie Sircar, Xinshuo Yang</p>
+        <p><strong>Publication:</strong> arXiv:2408.04830, August 2024.</p>
+        <p style="margin-top:10px;">
+          This paper introduces a novel approach to uncertainty and risk in power-system management, focusing on discrepancies between forecasted and actual values of load demand and renewable generation. Using Economic Dispatch with both day-ahead forecasts and realized values, the paper derives two distinct system costs and exposes the financial risk due to uncertainty. It then develops a numerical algorithm inspired by Integrated Gradients to attribute the contribution of stochastic inputs to the difference in system costs, providing actionable insights for grid management. As an application, the paper proposes a risk-averse unit commitment framework that adjusts renewable-generator capacity using the cost-attribution algorithm to mitigate system risk.
+        </p>
+      </div>
+
+      <div class="card" style="margin-top:14px;">
+        <h3><a href="https://doi.org/10.1109/TSTE.2023.3325202" target="_blank" rel="noopener">Joint Granular Model for Load, Solar and Wind Power Scenario Generation</a></h3>
+        <p><strong>Authors:</strong> René Carmona, Xinshuo Yang</p>
+        <p><strong>Publication:</strong> IEEE Transactions on Sustainable Energy, Volume 15, Number 1, pages 674-686, January 2024.</p>
+        <p style="margin-top:10px;">
+          This article develops a joint stochastic model for electricity demand, and wind and solar power production in a region. The model combines heavy-tail statistical estimation, graphical LASSO fitting procedures, and conditional Monte Carlo simulation. Assuming point forecasts are available, it models deviations from forecasts rather than the raw quantities themselves. The authors implement the framework on NREL data for Texas, with hourly load at the zone level and wind and solar production at the generation-asset level, and show that the learned dependencies align with the geography of the assets and load zones.
+        </p>
       </div>
     </section>
 
-  </div>
+  </main>
 
   <footer class="site-footer">
     <div class="footer-inner">

@@ -8,8 +8,9 @@
   <link rel="icon" type="image/png" href="assets/favicon.png">
 
 </head>
-<body>
-  <div class="page">
+<body class="home-page">
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <main class="page" id="main-content">
     <header class="princeton-shell">
       ORFEUS · Operational Risk Financialization of Electricity Under Stochasticity
     </header>
@@ -17,7 +18,7 @@
     <nav class="main-nav" aria-label="Main navigation">
       <div class="nav-brand">
         <img class="nav-brand-princeton" src="assets/PU_mark.png" alt="Princeton University">
-        <span class="nav-brand-sep"></span>
+        <span class="nav-brand-sep" aria-hidden="true"></span>
         <img class="nav-brand-mark" src="assets/orfeus-logo_0.png" alt="ORFEUS logo">
         <a href="index.html" class="nav-link nav-link--primary">ORFEUS</a>
       </div>
@@ -32,7 +33,7 @@
           <a href="blogs.html" class="nav-link">Blog</a>
         </div>
         <div class="nav-item nav-item--collapsible">
-          <a href="data-visualization.html" class="nav-link">Data Visualization ▾</a>
+          <a href="data-visualization.html" class="nav-link" aria-haspopup="true">Data Visualization ▾</a>
           <div class="nav-dropdown">
             <a href="data-visualization-scenarios.html">Scenarios Visualization</a>
             <a href="data-visualization-reliability.html">Reliability Cost Index</a>
@@ -43,82 +44,133 @@
           <a href="data-download.html" class="nav-link">Data Download</a>
         </div>
         <div class="nav-item nav-item--collapsible">
-          <a href="arpa-e-poster-2024.html" class="nav-link">ARPA‑E Poster</a>
+          <a href="assets/arpa_e_poster_2024/ARPA_E_poster_2024.pdf" class="nav-link">ORFEUS Poster</a>
         </div>
         <div class="nav-item nav-item--more">
-          <a href="#" class="nav-link">More ▾</a>
+          <a href="#" class="nav-link" aria-haspopup="true">More ▾</a>
           <div class="nav-dropdown">
             <a href="papers.html">Papers</a>
             <a href="blogs.html">Blog</a>
             <a href="data-visualization.html">Data Visualization</a>
             <a href="data-download.html">Data Download</a>
-            <a href="arpa-e-poster-2024.html">ARPA‑E Poster</a>
+            <a href="assets/arpa_e_poster_2024/ARPA_E_poster_2024.pdf">ORFEUS Poster</a>
           </div>
-        </div>
-        <div class="nav-item">
-          <a href="login.html" class="nav-link nav-link--cta">Log in</a>
         </div>
       </div>
     </nav>
 
-    <section class="reveal">
+    <section class="reveal intro-band">
       <div class="card card-accent">
         <div class="card-accent-label">ORFEUS</div>
         <h3><span class="orfeus-initial">O</span>perational <span class="orfeus-initial">R</span>isk <span class="orfeus-initial">F</span>inancialization of <span class="orfeus-initial">E</span>lectricity <span class="orfeus-initial">U</span>nder <span class="orfeus-initial">S</span>tochasticity</h3>
         <p>
-          ORFEUS is a research platform that measures how uncertainty in demand, wind,
-          and solar affects system costs and reliability. It provides transparent,
-          quantitative tools to help operators and policymakers plan a cost-effective
-          and reliable electricity transition.
+          ORFEUS is a research team at Princeton University headed by Professors René
+          Carmona and Ronnie Sircar that studies and quantifies supply, demand and
+          price uncertainties in modern electricity grids. It was started in 2020
+          under an ARPA-E award, and currently collaborates with state, federal,
+          academic and industry partners.
         </p>
       </div>
     </section>
 
-    <section class="hero" aria-labelledby="hero-title">
+    <section class="hero hero-home" aria-labelledby="hero-title">
       <div class="hero-orbit"></div>
-      <!-- HERO MODE: set to "video" for scroll-animated video, "image" for static picture -->
-      <div class="hero-photo-wrapper" data-hero-mode="image">
-        <video
-          class="hero-photo hero-photo--video"
-          src="assets/upscaled-video.mp4"
-          muted
-          playsinline
-          preload="auto"
-        ></video>
-        <img
-          class="hero-photo hero-photo--image"
-          src="assets/windturbine.png"
-          alt="Solar panels, wind turbines, batteries, and transmission lines at sunset."
-        />
-      </div>
-      <div class="hero-inner">
-        <div>
-          <div class="hero-eyebrow">About the Project</div>
-          <h1 id="hero-title" class="hero-title">
-            Quantifying <span>operational risk</span> in renewable electricity systems
-          </h1>
-          <h2 style="font-size:1.1rem; margin-bottom:10px;">Objectives</h2>
-          <p class="hero-tagline">
-            Modern electricity markets face new sources of risk as renewables footprint
-            increases, and price formation in the traditional sense will ultimately be
-            subordinated to reliability quantification. The ORFEUS platform ascribes risk
-            and costs to each asset's contribution to system operational cost. Its major
-            components include:
-          </p>
-          <ul style="margin: 10px 0 16px 20px; color: var(--muted); font-size: 0.9rem; line-height: 1.8;">
-            <li>Nodal load and generation scenarios</li>
-            <li>Analysis of system operation costs</li>
-            <li>Risk allocation and construction of system risk indices</li>
-            <li>Securitization and risk transfer</li>
-          </ul>
+      <div class="hero-grid">
+        <div class="hero-inner">
+          <div>
+            <div class="hero-eyebrow">Introduction</div>
+            <h1 id="hero-title" class="hero-title">
+              <span>Quantifying intermittency risk</span>
+            </h1>
+            <p class="hero-tagline hero-tagline--large">
+              Modern power grids that incorporate renewable sources alongside traditional
+              thermal generators face the risks of intermittency, which are inherently
+              stochastic. Renewable energy such as solar and wind depend on exogenous
+              factors, especially the weather, making it challenging to forecast
+              renewables' power production ahead of time.
+            </p>
+            <div class="hero-actions">
+              <a href="papers.html" class="btn btn-primary">View papers</a>
+              <a href="people.html" class="btn btn-primary">Meet the team</a>
+              <a href="blogs.html" class="btn btn-primary">Blog</a>
+              <a href="data-visualization.html" class="btn btn-primary">Explore visualizations</a>
+              <a href="data-download.html" class="btn btn-primary">Data</a>
+            </div>
+            <div class="hero-meta hero-meta--featured">
+              <div class="meta-pill">
+                <strong>Scenario engine</strong>
+                Nodal load and renewable uncertainty across grids and zones.
+              </div>
+              <div class="meta-pill">
+                <strong>Operational analytics</strong>
+                Simulation of unit commitment, dispatch, and realized reliability cost.
+              </div>
+              <div class="meta-pill">
+                <strong>Risk transfer layer</strong>
+                Asset-level attribution, indices, and securitization concepts.
+              </div>
+            </div>
+            <div class="hero-approach-card">
+              <div class="hero-approach-header">
+                <h2>ORFEUS Approach</h2>
+              </div>
+              <p class="hero-approach-copy">
+                Let <em>X</em> be random intermittent production, <em>a</em> be decision variables
+                that include power flow and other constraints, and <em>f<sub>a</sub></em> represent cost.
+                ORFEUS replaces deterministic optimization based on forecast values with stochastic
+                optimization that uses full distributional information.
+              </p>
+              <div class="hero-approach-diagram">
+                <img
+                  src="assets/homepage/orfeus-screenshot.png"
+                  alt="ORFEUS approach diagram comparing deterministic and stochastic optimization."
+                />
+              </div>
+              <div class="hero-approach-subsection">
+                <strong>Tools</strong>
+                <p>
+                  <a href="https://github.com/PrincetonUniversity/PGscen" target="_blank" rel="noopener">PGScen</a>
+                  This package generates power grid scenarios using GEMINI trained on historical grid
+                  asset actual and forecasted values.
+                </p>
+                <p>
+                  <a href="https://github.com/PrincetonUniversity/Vatic" target="_blank" rel="noopener">Vatic</a>
+                  is a Python package for running simulations of a power grid using the PJM framework
+                  consisting of alternating day-ahead unit commitment (UC) and real-time economic
+                  dispatch (ED) steps.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-    </section>
-
-    <section class="reveal">
-      <h2>Texas 2030 grid</h2>
-      <div class="figure-card" style="max-width: 50%; margin: 0 auto;">
-        <img src="assets/Texas2030_map.gif" alt="Texas 2030 CVaR allocation map" style="width: 100%; height: auto;">
+        <div class="hero-media-stack">
+          <!-- HERO MODE: set to "video" for scroll-animated video, "image" for static picture -->
+          <div class="hero-photo-wrapper" data-hero-mode="image">
+            <video
+              class="hero-photo hero-photo--video"
+              src="assets/upscaled-video.mp4"
+              muted
+              playsinline
+              preload="auto"
+              aria-label="Decorative animation of wind turbines and solar panels"
+            ></video>
+            <img
+              class="hero-photo hero-photo--image"
+              src="assets/windturbine.png"
+              alt="Solar panels, wind turbines, batteries, and transmission lines at sunset."
+            />
+          </div>
+          <aside class="hero-sidecard hero-sidecard--home" aria-label="Project focus">
+            <h2>Methodology</h2>
+            <ul class="hero-objectives">
+              <li>Step 1: Statistical model based on historical renewable and thermal generator data</li>
+              <li>Step 2: Monte Carlo scenario generation from calibrated real-time daily scenarios</li>
+              <li>Step 3: System risk computation using excess cost due to renewable intermittency</li>
+              <li>Step 4: Risk allocation via cohort-level and asset-level decomposition</li>
+              <li>Step 5: Reliability cost curves incorporated into day-ahead commitment</li>
+            </ul>
+          </aside>
+        </div>
       </div>
     </section>
 
@@ -149,8 +201,8 @@
     </section>
 
     <section class="reveal">
-      <div style="display:flex; gap:24px; align-items:center;">
-        <div style="flex:1;">
+      <div class="feature-split">
+        <div class="feature-split-copy">
           <h2>Financial Risk Measures Reliability Indices</h2>
           <p class="lead">
             Zero-marginal-cost assets are usually guaranteed to be committed even if they create
@@ -160,76 +212,60 @@
             allocate realized costs equitably.
           </p>
         </div>
-        <div class="figure-card" style="width:250px; min-width:250px;">
+        <div class="figure-card feature-split-media">
           <img src="assets/finrisk.jpg" alt="Financial Risk Measures Reliability Indices">
         </div>
       </div>
     </section>
 
+    <section class="reveal spotlight-section">
+      <h2>Texas 2030 grid</h2>
+      <p class="lead">
+        A system-level view of how ORFEUS tracks risk allocation across a future grid with high renewable penetration.
+      </p>
+      <div class="figure-card figure-card--spotlight">
+        <img src="assets/Texas2030_map.gif" alt="Texas 2030 CVaR allocation map">
+      </div>
+    </section>
+
     <section class="reveal">
-      <h2>How the ORFEUS platform works</h2>
+      <h2>Commercial Applications</h2>
       <p class="lead">
-        ORFEUS links renewable variability, system operation, and financial risk from
-        asset-level models through to risk indices and hedging products.
+        ORFEUS helps asset owners, grid planners, and market participants make better decisions in uncertain power markets. Using stochastic modeling of renewable output, demand, transmission conditions, and nodal prices, ORFEUS supports storage optimization, risk-based bidding, reliability planning, and emissions-aware market strategy.
       </p>
-      <div class="grid-3 reveal-children">
+      <div class="grid-3 grid-4-desktop reveal-children">
         <div class="card">
-          <div class="tag">Step 1</div>
-          <h3>Generate scenarios</h3>
+          <h3>Storage Optimization</h3>
           <p>
-            Calibrate stochastic models of the joint behavior of forecasts and actuals,
-            tailored to wind, solar, and load at each node.
+            Batteries must decide when to charge, when to discharge, and how to balance energy, ancillary services, and capacity value under uncertain prices and system conditions. ORFEUS provides probabilistic nodal price forecasts and risk-aware optimization that can improve bidding, increase revenues, and support more reliable dispatch.
           </p>
         </div>
         <div class="card">
-          <div class="tag">Step 2</div>
-          <h3>Simulate system operation</h3>
+          <h3>Risk-Based Bidding for Asset Owners</h3>
           <p>
-            Run large batches of day-ahead scenarios through security-constrained unit
-            commitment and economic dispatch.
+            ORFEUS can support more informed bidding and revenue management for asset owners across wholesale power markets. Its stochastic framework produces asset-level risk measures together with distributions of locational marginal prices, giving market participants a stronger basis for day-ahead and real-time strategy than deterministic forecasts alone.
           </p>
         </div>
         <div class="card">
-          <div class="tag">Step 3</div>
-          <h3>Attribute risk and cost</h3>
+          <h3>Grid Planning and Operations</h3>
           <p>
-            Decompose realized system costs using coherent risk measures and attribute
-            them to assets and zones.
+            As renewable penetration increases, grid operators and planners need tools that better capture uncertainty, correlation, and transmission constraints. ORFEUS has potential applications in dynamic reserve setting, storage monitoring, reliability planning, and integrated generation-transmission analysis.
+          </p>
+        </div>
+        <div class="card">
+          <h3>Emissions-Aware Optimization</h3>
+          <p>
+            ORFEUS can also optimize for environmental performance by estimating locational marginal emission rates alongside locational prices. This creates opportunities for batteries, large power consumers, and sustainability-focused organizations to reduce carbon impact while still accounting for economic value.
           </p>
         </div>
       </div>
     </section>
 
-    <section id="data-tools" class="reveal">
-      <h2>Data &amp; tools</h2>
-      <p class="lead">
-        Explore ORFEUS visualizations, risk indices, and downloadable datasets.
-      </p>
-      <div class="grid-3 reveal-children">
-        <div class="card">
-          <h3>Interactive visualizations</h3>
-          <p>Scenario and risk visualizations in a browser-based interface.</p>
-        </div>
-        <div class="card">
-          <h3>Downloadable datasets</h3>
-          <p>Scenario data, risk indices, correlation matrices, and more.</p>
-        </div>
-        <div class="card">
-          <h3>Methods &amp; documentation</h3>
-          <p>Technical descriptions of models, calibration, and risk allocation.</p>
-        </div>
-      </div>
+    <section id="flyer" class="reveal cta-panel">
+      <a href="assets/arpa_e_poster_2024/ARPA_E_poster_2024.pdf" class="btn btn-primary">Download ORFEUS flyer</a>
     </section>
 
-    <section id="flyer" class="reveal">
-      <h2>Printable project overview</h2>
-      <p class="lead">
-        Download a concise overview of the ORFEUS project, suitable for briefings and handouts.
-      </p>
-      <a href="#" class="btn btn-primary">Download ORFEUS flyer (placeholder)</a>
-    </section>
-
-  </div>
+  </main>
 
   <footer class="site-footer">
     <div class="footer-inner">

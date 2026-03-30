@@ -8,7 +8,8 @@
   <link rel="icon" type="image/png" href="assets/favicon.png">
 </head>
 <body>
-  <div class="page">
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <main class="page" id="main-content">
     <header class="princeton-shell">
       ORFEUS · Operational Risk Financialization of Electricity Under Stochasticity
     </header>
@@ -16,7 +17,7 @@
     <nav class="main-nav" aria-label="Main navigation">
       <div class="nav-brand">
         <img class="nav-brand-princeton" src="assets/PU_mark.png" alt="Princeton University">
-        <span class="nav-brand-sep"></span>
+        <span class="nav-brand-sep" aria-hidden="true"></span>
         <img class="nav-brand-mark" src="assets/orfeus-logo_0.png" alt="ORFEUS logo">
         <a href="index.html" class="nav-link nav-link--primary">ORFEUS</a>
       </div>
@@ -31,7 +32,7 @@
           <a href="blogs.html" class="nav-link">Blog</a>
         </div>
         <div class="nav-item nav-item--collapsible">
-          <a href="data-visualization.html" class="nav-link">Data Visualization ▾</a>
+          <a href="data-visualization.html" class="nav-link" aria-haspopup="true">Data Visualization ▾</a>
           <div class="nav-dropdown">
             <a href="data-visualization-scenarios.html">Scenarios Visualization</a>
             <a href="data-visualization-reliability.html">Reliability Cost Index</a>
@@ -42,49 +43,34 @@
           <a href="data-download.html" class="nav-link">Data Download</a>
         </div>
         <div class="nav-item nav-item--collapsible">
-          <a href="arpa-e-poster-2024.html" class="nav-link">ARPA‑E Poster</a>
+          <a href="assets/arpa_e_poster_2024/ARPA_E_poster_2024.pdf" class="nav-link">ORFEUS Poster</a>
         </div>
         <div class="nav-item nav-item--more">
-          <a href="#" class="nav-link">More ▾</a>
+          <a href="#" class="nav-link" aria-haspopup="true">More ▾</a>
           <div class="nav-dropdown">
             <a href="papers.html">Papers</a>
             <a href="blogs.html">Blog</a>
             <a href="data-visualization.html">Data Visualization</a>
             <a href="data-download.html">Data Download</a>
-            <a href="arpa-e-poster-2024.html">ARPA‑E Poster</a>
+            <a href="assets/arpa_e_poster_2024/ARPA_E_poster_2024.pdf">ORFEUS Poster</a>
           </div>
-        </div>
-        <div class="nav-item">
-          <a href="login.html" class="nav-link nav-link--cta">Log in</a>
         </div>
       </div>
     </nav>
 
 
     <section class="reveal">
-      <h1>Blog</h1>
-      <p class="lead">
-        Commentary, updates, and non-technical explanations of ORFEUS insights.
-      </p>
-      <div class="card reveal">
-        <h3>Welcome to the ORFEUS Blog</h3>
-        <p>Here we share project updates, explain key concepts in renewable energy risk, and discuss how ORFEUS tools support grid planning and policy. New posts will appear as the project evolves.</p>
-      </div>
-      <a href="blog-data-centers-grid.html" class="card reveal" style="text-decoration: none; color: inherit; display: block;">
-        <h3>Data centers will strain the grid (even with demand response)</h3>
-        <p><strong>Kirill Sirik, Alex Crosier, Ronnie Sircar</strong> — Large technology companies have a massive hunger for electricity to power AI and cloud data centers. Using grid simulation software Vatic, we studied the impact of 22 GW of projected data center load on the Texas grid. Average wholesale prices rose 49%; demand response helped during peak hours but had limited impact on yearly system costs.</p>
+      <a class="blog-hero-link" href="data-centers-will-strain-grid-even-demand-response.html">
+        <h1 class="blog-hero-title">
+          Data centers will strain the grid (even with demand response)
+        </h1>
+        <p class="blog-hero-subtitle">
+          The following blog contains a micro-study of the data center demand effects on the synthetic 2030 Texas energy grid.
+        </p>
       </a>
-      <div class="card reveal">
-        <h3>Why operational risk matters for the energy transition</h3>
-        <p>As wind and solar replace conventional generation, system operators face new sources of uncertainty. This post introduces how ORFEUS quantifies and allocates that risk across assets and zones.</p>
-      </div>
-      <div class="card reveal">
-        <h3>Sample post: Data visualization walkthrough</h3>
-        <p>A short guide to the ORFEUS data visualization suite—scenarios, risk allocation plots, and LMP geographic views—and how to interpret them.</p>
-      </div>
     </section>
 
-  </div>
+  </main>
 
   <footer class="site-footer">
     <div class="footer-inner">
