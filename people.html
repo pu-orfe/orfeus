@@ -9,54 +9,55 @@
 </head>
 <body>
   <a class="skip-link" href="#main-content">Skip to main content</a>
-  <main class="page" id="main-content">
-    <header class="princeton-shell">
-      ORFEUS · Operational Risk Financialization of Electricity Under Stochasticity
-    </header>
+  <header class="princeton-shell sr-only">
+    ORFEUS · Operational Risk Financialization of Electricity Under Stochasticity
+  </header>
 
-    <nav class="main-nav" aria-label="Main navigation">
-      <div class="nav-brand">
-        <img class="nav-brand-princeton" src="assets/images/PU_mark.png" alt="Princeton University">
-        <span class="nav-brand-sep" aria-hidden="true"></span>
-        <img class="nav-brand-mark" src="assets/images/orfeus-logo_0.png" alt="ORFEUS logo">
-        <a href="index.html" class="nav-link nav-link--primary">ORFEUS</a>
+  <nav class="main-nav" aria-label="Main navigation">
+    <div class="nav-brand">
+      <img class="nav-brand-princeton" src="assets/images/PU_mark.png" alt="Princeton University">
+      <span class="nav-brand-sep" aria-hidden="true"></span>
+      <img class="nav-brand-mark" src="assets/images/orfeus-logo_0.png" alt="ORFEUS logo">
+      <a href="index.html" class="nav-link nav-link--primary">ORFEUS</a>
+    </div>
+    <div class="nav-links">
+      <div class="nav-item nav-item--collapsible">
+        <a href="papers.html" class="nav-link">Papers</a>
       </div>
-      <div class="nav-links">
-<div class="nav-item nav-item--collapsible">
-          <a href="papers.html" class="nav-link">Papers</a>
-        </div>
-        <div class="nav-item">
-          <a href="people.html" class="nav-link">People</a>
-        </div>
-        <div class="nav-item">
-          <a href="blogs.html" class="nav-link">Blog</a>
-        </div>
-        <div class="nav-item nav-item--collapsible">
-          <a href="data-visualization.html" class="nav-link" aria-haspopup="true">Data Visualization ▾</a>
-          <div class="nav-dropdown">
-            <a href="data-visualization-scenarios.html">Scenarios Visualization</a>
-            <a href="data-visualization-reliability.html">Reliability Cost Index</a>
-            <a href="data-visualization-lmp.html">LMP Geographical Visualization</a>
-          </div>
-        </div>
-        <div class="nav-item nav-item--collapsible">
-          <a href="data-download.html" class="nav-link">Data Download</a>
-        </div>
-        <div class="nav-item nav-item--collapsible">
-          <a href="assets/arpa_e_poster_2024/ARPA_E_poster_2024.pdf" class="nav-link">ORFEUS Poster</a>
-        </div>
-        <div class="nav-item nav-item--more">
-          <a href="#" class="nav-link" aria-haspopup="true">More ▾</a>
-          <div class="nav-dropdown">
-            <a href="papers.html">Papers</a>
-            <a href="blogs.html">Blog</a>
-            <a href="data-visualization.html">Data Visualization</a>
-            <a href="data-download.html">Data Download</a>
-            <a href="assets/arpa_e_poster_2024/ARPA_E_poster_2024.pdf">ORFEUS Poster</a>
-          </div>
+      <div class="nav-item">
+        <a href="people.html" class="nav-link">People</a>
+      </div>
+      <div class="nav-item">
+        <a href="blogs.html" class="nav-link">Blog</a>
+      </div>
+      <div class="nav-item nav-item--collapsible">
+        <a href="data-visualization.html" class="nav-link" aria-haspopup="true" aria-expanded="false" aria-controls="dropdown-dataviz">Data Visualization <span class="nav-arrow" aria-hidden="true">▾</span></a>
+        <div class="nav-dropdown" id="dropdown-dataviz" role="group" aria-label="Data Visualization submenu">
+          <a href="data-visualization-scenarios.html">Scenarios Visualization</a>
+          <a href="data-visualization-reliability.html">Reliability Cost Index</a>
+          <a href="data-visualization-lmp.html">LMP Geographical Visualization</a>
         </div>
       </div>
-    </nav>
+      <div class="nav-item nav-item--collapsible">
+        <a href="data-download.html" class="nav-link">Data Download</a>
+      </div>
+      <div class="nav-item nav-item--collapsible">
+        <a href="assets/arpa_e_poster_2024/ARPA_E_poster_2024.pdf" class="nav-link">ORFEUS Poster <span class="sr-only">(PDF)</span></a>
+      </div>
+      <div class="nav-item nav-item--more">
+        <button class="nav-link" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="dropdown-more">More <span class="nav-arrow" aria-hidden="true">▾</span></button>
+        <div class="nav-dropdown" id="dropdown-more" role="group" aria-label="More navigation links">
+          <a href="papers.html">Papers</a>
+          <a href="blogs.html">Blog</a>
+          <a href="data-visualization.html">Data Visualization</a>
+          <a href="data-download.html">Data Download</a>
+          <a href="assets/arpa_e_poster_2024/ARPA_E_poster_2024.pdf">ORFEUS Poster <span class="sr-only">(PDF)</span></a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main class="page" id="main-content">
 
     <section id="pis" class="reveal">
       <h2>Principal Investigators</h2>
@@ -176,5 +177,6 @@
     </div>
   </footer>
   <script src="assets/js/reveal.js"></script>
+  <script src="assets/js/nav.js"></script>
 </body>
 </html>
