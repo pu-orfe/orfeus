@@ -1,4 +1,4 @@
-# ORFEUS — Operational Risk Financialization of Electricity Under Stochasticity
+# Operational Risk Financialization of Electricity Under Stochasticity (ORFEUS)
 
 Static website for the [ORFEUS research group](https://pu-orfe.github.io/orfeus/) at Princeton University, led by Professors René Carmona and Ronnie Sircar.
 
