@@ -28,6 +28,9 @@
     </button>
     <ul class="nav-links" id="nav-links" role="list">
       <li class="nav-item nav-item--collapsible">
+        <a href="index.html" class="nav-link">Home</a>
+      </li>
+      <li class="nav-item nav-item--collapsible">
         <a href="papers.html" class="nav-link">Papers</a>
       </li>
       <li class="nav-item">
@@ -49,7 +52,7 @@
         <a href="data-download.html" class="nav-link">Data Download</a>
       </li>
       <li class="nav-item nav-item--collapsible">
-        <a href="assets/arpa_e_poster_2024/ARPA_E_poster_2024.pdf" class="nav-link">ORFEUS Poster <span class="sr-only">(PDF)</span></a>
+        <a href="assets/arpa_e_poster_2024/ARPA_E_poster_2024.pdf" class="nav-link">Poster <span class="sr-only">(PDF)</span></a>
       </li>
       <li class="nav-item nav-item--more">
         <button class="nav-link" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="dropdown-more">More <span class="nav-arrow" aria-hidden="true">▾</span></button>
@@ -58,7 +61,7 @@
           <li><a href="blogs.html">Blog</a></li>
           <li><a href="data-visualization.html">Data Visualization</a></li>
           <li><a href="data-download.html">Data Download</a></li>
-          <li><a href="assets/arpa_e_poster_2024/ARPA_E_poster_2024.pdf">ORFEUS Poster <span class="sr-only">(PDF)</span></a></li>
+          <li><a href="assets/arpa_e_poster_2024/ARPA_E_poster_2024.pdf">Poster <span class="sr-only">(PDF)</span></a></li>
         </ul>
       </li>
     </ul>
@@ -89,7 +92,7 @@
       <p>We ran Vatic on a full-year simulation using a two-day-ahead forecast. On the <a href="https://orfeus.scholar-test.princeton.edu/bau-vs-demand-response-graphs-month" target="_blank" rel="noopener">following page <span class="sr-only">(opens in new tab)</span></a>, we plotted a few metrics for a representative day from each month.</p>
       <p>We analyze the output from January 17th and July 18th, as they appeared to be most interesting. For these days, we analyzed six metrics: Demand, Renewables Curtailment, Energy Price, Total Costs, Thermal Dispatch, and Renewable Output Dispatch. We define these quantities as follows:</p>
       <p><strong>Total Cost:</strong> the sum of Variables and Fixed costs + λ × Load Shedding</p>
-      <ol style="margin-left: 20px;">
+      <ol>
         <li><strong>Load Shedding:</strong> As described in the “Quantifying Renewables Reliability Risk in Modern and Future Electricity Grids” <a href="https://sircar.princeton.edu/sites/g/files/toruqf5981/files/documents/risk_allocation_v8.pdf" target="_blank" rel="noopener">paper <span class="sr-only">(opens in new tab)</span></a>, represents the amount in MWh from the commitment and dispatch which could not be serviced without out-of-market corrections, and λ is a monetary penalty per unit MWh of load shedding ($/MWh). In our experiments, we take λ = $10K/MWh, which is consistent with ERCOT’s price cap that has recently ranged from $5K/MWh to $9K/MWh.</li>
         <li><strong>Fixed costs:</strong> the operational costs of generators that remain constant regardless of the energy consumption.</li>
         <li><strong>Variable costs:</strong> the costs that fluctuate based on how much energy is used, including the marginal fuel and start-up costs of dispatched generators.</li>
@@ -175,7 +178,7 @@
       <p>With data center loads curtailed during peak hours, we re-ran the full year simulation of the Texas 2030 grid.</p>
       <h3>Findings</h3>
       <p>First, we demonstrate the effectiveness of demand response on two days in July with unusually high demand peaks. Under our procedure, the demand curtailment is greatest on these peak loads. We observe the following:</p>
-      <ol style="margin-left: 20px;">
+      <ol>
         <li>Renewable output dispatch decreased by about 2.3%</li>
         <li>Thermal dispatch decreased by about 8.7%</li>
         <li>Total costs went down by about 57%</li>

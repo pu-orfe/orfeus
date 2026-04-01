@@ -608,6 +608,9 @@ section {
 section h2, section h1 {
   font-size: 1.4rem;
   margin-bottom: 8px;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 6px;
 }
 section p.lead {
   font-size: 0.9rem;
@@ -664,6 +667,13 @@ section p.lead {
   background: rgba(5, 150, 105, 0.06);
   font-size: 0.7rem;
   color: var(--accent);
+}
+/* Spacing for standalone cards (not inside grids) */
+section > .card {
+  margin-top: 14px;
+}
+.card > .card-actions:first-child {
+  margin-top: 0;
 }
 .card-actions {
   margin-top: 10px;
@@ -807,11 +817,6 @@ section p.lead {
 }
 
 /* SECTION HEADING ACCENT */
-section h2, section h1 {
-  position: relative;
-  display: inline-block;
-  padding-bottom: 6px;
-}
 section h2::after, section h1::after {
   content: "";
   position: absolute;
@@ -908,11 +913,6 @@ section h2::after, section h1::after {
   background-clip: text;
   color: transparent;
   animation: none;
-  background: var(--accent) !important;
-  -webkit-background-clip: text !important;
-  background-clip: text !important;
-  color: transparent !important;
-  animation: none !important;
 }
 .card-accent:hover .card-accent-label {
   color: var(--accent);
@@ -1042,10 +1042,17 @@ section h2::after, section h1::after {
 .article-page ol,
 .article-page ul {
   margin-bottom: 1em;
+  margin-left: 20px;
   font-size: 0.9rem;
 }
 
+/* Card body text separated from metadata */
+.card-body {
+  margin-top: 10px;
+}
+
 .visualization-frame-wrap {
+  margin-top: 18px;
   border: 1px solid var(--border);
   background: var(--card);
 }
@@ -1219,6 +1226,7 @@ body.home-page .spotlight-section {
   text-align: center;
 }
 body.home-page .figure-card--spotlight {
+  position: relative;
   max-width: 760px;
   margin: 0 auto;
   padding: 18px;
@@ -1326,10 +1334,25 @@ body.home-page .cta-panel {
 
 /* GIF pause/play button — meets 44×44 touch target (WCAG 2.5.8) */
 #gif-toggle {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
   min-width: 44px;
   min-height: 44px;
   padding: 8px 14px;
   font-size: 0.82rem;
+}
+
+/* Nested sections use tighter spacing */
+section > section {
+  margin-top: 24px;
+}
+
+/* Poster preview image */
+.poster-preview {
+  width: 100%;
+  border-radius: 12px;
+  border: 1px solid rgba(148, 163, 184, 0.35);
 }
 
 /* Figure-grid horizontal scroll keyboard hint */
