@@ -374,6 +374,8 @@ button.nav-link {
   }
   .nav-item {
     width: 100%;
+    flex-direction: column;
+    align-items: stretch;
   }
   .nav-link {
     padding: 12px 24px;
