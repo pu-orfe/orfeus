@@ -1,9 +1,62 @@
 /**
- * Accessible navigation dropdown handling.
- * Manages aria-expanded state, keyboard navigation (Arrow keys, Escape),
- * and focus trapping within dropdown menus.
+ * Accessible navigation handling.
+ * - Hamburger toggle for mobile (≤768px)
+ * - Dropdown aria-expanded, keyboard nav (Arrow keys, Escape), focus trapping
  */
 (() => {
+  /* ── Hamburger menu ── */
+  const hamburger = document.querySelector('.nav-hamburger');
+  const navLinks = document.getElementById('nav-links');
+
+  if (hamburger && navLinks) {
+    function openMenu() {
+      navLinks.classList.add('nav-links--open');
+      hamburger.setAttribute('aria-expanded', 'true');
+    }
+
+    function closeMenu() {
+      navLinks.classList.remove('nav-links--open');
+      hamburger.setAttribute('aria-expanded', 'false');
+    }
+
+    function menuIsOpen() {
+      return hamburger.getAttribute('aria-expanded') === 'true';
+    }
+
+    hamburger.addEventListener('click', () => {
+      if (menuIsOpen()) {
+        closeMenu();
+      } else {
+        openMenu();
+        // Focus the first link in the menu
+        const firstLink = navLinks.querySelector('a, button');
+        if (firstLink) firstLink.focus();
+      }
+    });
+
+    // Close on Escape
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape' && menuIsOpen()) {
+        closeMenu();
+        hamburger.focus();
+      }
+    });
+
+    // Close when clicking outside the nav
+    document.addEventListener('click', e => {
+      if (menuIsOpen() && !navLinks.contains(e.target) && !hamburger.contains(e.target)) {
+        closeMenu();
+      }
+    });
+
+    // Close menu when viewport grows past the breakpoint
+    const mql = window.matchMedia('(min-width: 769px)');
+    mql.addEventListener('change', e => {
+      if (e.matches && menuIsOpen()) closeMenu();
+    });
+  }
+
+  /* ── Dropdown menus ── */
   const items = document.querySelectorAll('.nav-item');
 
   items.forEach(item => {
