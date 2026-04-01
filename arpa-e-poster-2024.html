@@ -25,31 +25,32 @@
       <span class="nav-hamburger-line" aria-hidden="true"></span>
       <span class="nav-hamburger-line" aria-hidden="true"></span>
     </button>
-    <div class="nav-links" id="nav-links">
-      <div class="nav-item nav-item--collapsible">
+    <ul class="nav-links" id="nav-links" role="list">
+      <li class="nav-item nav-item--collapsible">
         <a href="papers.html" class="nav-link">Papers</a>
-      </div>
-      <div class="nav-item">
+      </li>
+      <li class="nav-item">
         <a href="people.html" class="nav-link">People</a>
-      </div>
-      <div class="nav-item">
+      </li>
+      <li class="nav-item">
         <a href="blogs.html" class="nav-link">Blog</a>
-      </div>
-      <div class="nav-item nav-item--collapsible">
-        <a href="data-visualization.html" class="nav-link" aria-haspopup="true" aria-expanded="false" aria-controls="dropdown-dataviz">Data Visualization <span class="nav-arrow" aria-hidden="true">▾</span></a>
+      </li>
+      <li class="nav-item nav-item--collapsible">
+        <button class="nav-link" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="dropdown-dataviz">Data Visualization <span class="nav-arrow" aria-hidden="true">▾</span></button>
         <div class="nav-dropdown" id="dropdown-dataviz" role="group" aria-label="Data Visualization submenu">
+          <a href="data-visualization.html">Data Visualization Overview</a>
           <a href="data-visualization-scenarios.html">Scenarios Visualization</a>
           <a href="data-visualization-reliability.html">Reliability Cost Index</a>
           <a href="data-visualization-lmp.html">LMP Geographical Visualization</a>
         </div>
-      </div>
-      <div class="nav-item nav-item--collapsible">
+      </li>
+      <li class="nav-item nav-item--collapsible">
         <a href="data-download.html" class="nav-link">Data Download</a>
-      </div>
-      <div class="nav-item nav-item--collapsible">
+      </li>
+      <li class="nav-item nav-item--collapsible">
         <a href="assets/arpa_e_poster_2024/ARPA_E_poster_2024.pdf" class="nav-link">ORFEUS Poster <span class="sr-only">(PDF)</span></a>
-      </div>
-      <div class="nav-item nav-item--more">
+      </li>
+      <li class="nav-item nav-item--more">
         <button class="nav-link" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="dropdown-more">More <span class="nav-arrow" aria-hidden="true">▾</span></button>
         <div class="nav-dropdown" id="dropdown-more" role="group" aria-label="More navigation links">
           <a href="papers.html">Papers</a>
@@ -58,8 +59,8 @@
           <a href="data-download.html">Data Download</a>
           <a href="assets/arpa_e_poster_2024/ARPA_E_poster_2024.pdf">ORFEUS Poster <span class="sr-only">(PDF)</span></a>
         </div>
-      </div>
-    </div>
+      </li>
+    </ul>
   </nav>
 
   <main class="page" id="main-content">
@@ -95,22 +96,22 @@
           <div class="card">
             <h3>Images</h3>
             <p>Browse the extracted PNG assets from the Keynote “Data/” directory.</p>
-            <div class="card-actions">
-              <a href="assets/arpa_e_poster_2024/data/">Open asset folder</a>
+            <div class=”card-actions”>
+              <a href=”assets/arpa_e_poster_2024/data/”>Open asset folder <span class=”sr-only”>for images</span></a>
             </div>
           </div>
-          <div class="card">
+          <div class=”card”>
             <h3>Equation PDFs</h3>
             <p>Equation renders extracted as PDFs (from Keynote’s equation objects).</p>
-            <div class="card-actions">
-              <a href="assets/arpa_e_poster_2024/data/">Open asset folder</a>
+            <div class=”card-actions”>
+              <a href=”assets/arpa_e_poster_2024/data/”>Open asset folder <span class=”sr-only”>for equations</span></a>
             </div>
           </div>
-          <div class="card">
+          <div class=”card”>
             <h3>Preview images</h3>
             <p>Keynote-generated previews (micro / web / full).</p>
-            <div class="card-actions">
-              <a href="assets/arpa_e_poster_2024/">Open preview folder</a>
+            <div class=”card-actions”>
+              <a href=”assets/arpa_e_poster_2024/”>Open preview folder <span class=”sr-only”>for Keynote previews</span></a>
             </div>
           </div>
         </div>

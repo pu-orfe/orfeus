@@ -26,31 +26,32 @@
       <span class="nav-hamburger-line" aria-hidden="true"></span>
       <span class="nav-hamburger-line" aria-hidden="true"></span>
     </button>
-    <div class="nav-links" id="nav-links">
-      <div class="nav-item nav-item--collapsible">
+    <ul class="nav-links" id="nav-links" role="list">
+      <li class="nav-item nav-item--collapsible">
         <a href="papers.html" class="nav-link">Papers</a>
-      </div>
-      <div class="nav-item">
+      </li>
+      <li class="nav-item">
         <a href="people.html" class="nav-link">People</a>
-      </div>
-      <div class="nav-item">
+      </li>
+      <li class="nav-item">
         <a href="blogs.html" class="nav-link">Blog</a>
-      </div>
-      <div class="nav-item nav-item--collapsible">
-        <a href="data-visualization.html" class="nav-link" aria-haspopup="true" aria-expanded="false" aria-controls="dropdown-dataviz">Data Visualization <span class="nav-arrow" aria-hidden="true">▾</span></a>
+      </li>
+      <li class="nav-item nav-item--collapsible">
+        <button class="nav-link" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="dropdown-dataviz">Data Visualization <span class="nav-arrow" aria-hidden="true">▾</span></button>
         <div class="nav-dropdown" id="dropdown-dataviz" role="group" aria-label="Data Visualization submenu">
+          <a href="data-visualization.html">Data Visualization Overview</a>
           <a href="data-visualization-scenarios.html">Scenarios Visualization</a>
           <a href="data-visualization-reliability.html">Reliability Cost Index</a>
           <a href="data-visualization-lmp.html">LMP Geographical Visualization</a>
         </div>
-      </div>
-      <div class="nav-item nav-item--collapsible">
+      </li>
+      <li class="nav-item nav-item--collapsible">
         <a href="data-download.html" class="nav-link">Data Download</a>
-      </div>
-      <div class="nav-item nav-item--collapsible">
+      </li>
+      <li class="nav-item nav-item--collapsible">
         <a href="assets/arpa_e_poster_2024/ARPA_E_poster_2024.pdf" class="nav-link">ORFEUS Poster <span class="sr-only">(PDF)</span></a>
-      </div>
-      <div class="nav-item nav-item--more">
+      </li>
+      <li class="nav-item nav-item--more">
         <button class="nav-link" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="dropdown-more">More <span class="nav-arrow" aria-hidden="true">▾</span></button>
         <div class="nav-dropdown" id="dropdown-more" role="group" aria-label="More navigation links">
           <a href="papers.html">Papers</a>
@@ -59,8 +60,8 @@
           <a href="data-download.html">Data Download</a>
           <a href="assets/arpa_e_poster_2024/ARPA_E_poster_2024.pdf">ORFEUS Poster <span class="sr-only">(PDF)</span></a>
         </div>
-      </div>
-    </div>
+      </li>
+    </ul>
   </nav>
 
   <main class="page" id="main-content">
@@ -68,7 +69,7 @@
     <section class="reveal intro-band">
       <div class="card card-accent">
         <div class="card-accent-label">ORFEUS</div>
-        <h2><span class="orfeus-initial">O</span>perational <span class="orfeus-initial">R</span>isk <span class="orfeus-initial">F</span>inancialization of <span class="orfeus-initial">E</span>lectricity <span class="orfeus-initial">U</span>nder <span class="orfeus-initial">S</span>tochasticity</h2>
+        <h1><span class="orfeus-initial">O</span>perational <span class="orfeus-initial">R</span>isk <span class="orfeus-initial">F</span>inancialization of <span class="orfeus-initial">E</span>lectricity <span class="orfeus-initial">U</span>nder <span class="orfeus-initial">S</span>tochasticity</h1>
         <p>
           ORFEUS is a research team at Princeton University headed by Professors René
           Carmona and Ronnie Sircar that studies and quantifies supply, demand and
@@ -85,9 +86,9 @@
         <div class="hero-inner">
           <div>
             <div class="hero-eyebrow">Introduction</div>
-            <h1 id="hero-title" class="hero-title">
+            <h2 id="hero-title" class="hero-title">
               <span>Quantifying intermittency risk</span>
-            </h1>
+            </h2>
             <p class="hero-tagline hero-tagline--large">
               Modern power grids that incorporate renewable sources alongside traditional
               thermal generators face the risks of intermittency, which are inherently
@@ -118,11 +119,11 @@
             </div>
             <div class="hero-approach-card">
               <div class="hero-approach-header">
-                <h2>ORFEUS Approach</h2>
+                <h3>ORFEUS Approach</h3>
               </div>
               <p class="hero-approach-copy">
-                Let <em>X</em> be random intermittent production, <em>a</em> be decision variables
-                that include power flow and other constraints, and <em>f<sub>a</sub></em> represent cost.
+                Let <math><mi>X</mi></math> be random intermittent production, <math><mi>a</mi></math> be decision variables
+                that include power flow and other constraints, and <math><msub><mi>f</mi><mi>a</mi></msub></math> represent cost.
                 ORFEUS replaces deterministic optimization based on forecast values with stochastic
                 optimization that uses full distributional information.
               </p>
@@ -135,12 +136,12 @@
               <div class="hero-approach-subsection">
                 <strong>Tools</strong>
                 <p>
-                  <a href="https://github.com/PrincetonUniversity/PGscen" target="_blank" rel="noopener">PGScen</a>
+                  <a href="https://github.com/PrincetonUniversity/PGscen" target="_blank" rel="noopener">PGScen <span class="sr-only">(opens in new tab)</span></a>
                   This package generates power grid scenarios using GEMINI trained on historical grid
                   asset actual and forecasted values.
                 </p>
                 <p>
-                  <a href="https://github.com/PrincetonUniversity/Vatic" target="_blank" rel="noopener">Vatic</a>
+                  <a href="https://github.com/PrincetonUniversity/Vatic" target="_blank" rel="noopener">Vatic <span class="sr-only">(opens in new tab)</span></a>
                   is a Python package for running simulations of a power grid using the PJM framework
                   consisting of alternating day-ahead unit commitment (UC) and real-time economic
                   dispatch (ED) steps.
@@ -158,7 +159,7 @@
               muted
               playsinline
               preload="auto"
-              aria-label="Decorative animation of wind turbines and solar panels"
+              aria-hidden="true"
             ></video>
             <img
               class="hero-photo hero-photo--image"
@@ -167,7 +168,7 @@
             />
           </div>
           <aside class="hero-sidecard hero-sidecard--home" aria-label="Project focus">
-            <h2>Methodology</h2>
+            <h3>Methodology</h3>
             <ul class="hero-objectives">
               <li>Step 1: Statistical model based on historical renewable and thermal generator data</li>
               <li>Step 2: Monte Carlo scenario generation from calibrated real-time daily scenarios</li>
@@ -229,8 +230,9 @@
       <p class="lead">
         A system-level view of how ORFEUS tracks risk allocation across a future grid with high renewable penetration.
       </p>
-      <div class="figure-card figure-card--spotlight">
-        <img src="assets/images/Texas2030_map.gif" alt="Texas 2030 CVaR allocation map">
+      <div class="figure-card figure-card--spotlight" style="position:relative;">
+        <img id="gif-texas2030" src="assets/images/Texas2030_map.gif" alt="Animated map showing CVaR risk allocation across Texas 2030 grid zones over multiple scenarios.">
+        <button type="button" id="gif-toggle" class="btn" style="position:absolute;bottom:10px;right:10px;font-size:0.78rem;padding:4px 10px;" aria-label="Pause animation" aria-pressed="false">Pause</button>
       </div>
     </section>
 
@@ -267,7 +269,7 @@
       </div>
     </section>
 
-    <section id="flyer" class="reveal cta-panel">
+    <section id="flyer" class="reveal cta-panel" aria-label="Download ORFEUS flyer">
       <a href="assets/arpa_e_poster_2024/ARPA_E_poster_2024.pdf" class="btn btn-primary">Download ORFEUS flyer <span class="sr-only">(PDF)</span></a>
     </section>
 
@@ -304,6 +306,40 @@
       }, { passive: true });
     })();
 
+  </script>
+  <script>
+    (() => {
+      const img = document.getElementById('gif-texas2030');
+      const btn = document.getElementById('gif-toggle');
+      if (!img || !btn) return;
+      const gifSrc = img.src;
+      let staticSrc = null;
+      const makeStatic = () => {
+        const c = document.createElement('canvas');
+        c.width = img.naturalWidth;
+        c.height = img.naturalHeight;
+        c.getContext('2d').drawImage(img, 0, 0);
+        staticSrc = c.toDataURL('image/png');
+      };
+      if (img.complete) makeStatic();
+      else img.addEventListener('load', makeStatic);
+
+      let paused = false;
+      btn.addEventListener('click', () => {
+        paused = !paused;
+        if (paused && staticSrc) {
+          img.src = staticSrc;
+          btn.textContent = 'Play';
+          btn.setAttribute('aria-label', 'Play animation');
+          btn.setAttribute('aria-pressed', 'true');
+        } else {
+          img.src = gifSrc;
+          btn.textContent = 'Pause';
+          btn.setAttribute('aria-label', 'Pause animation');
+          btn.setAttribute('aria-pressed', 'false');
+        }
+      });
+    })();
   </script>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js"></script>

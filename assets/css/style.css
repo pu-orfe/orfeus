@@ -160,6 +160,9 @@ textarea:focus-visible {
   gap: 6px;
   font-size: 1.05rem;
   flex-wrap: nowrap;
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
 }
 .nav-item {
   position: relative;
@@ -186,7 +189,7 @@ textarea:focus-visible {
   bottom: -2px;
   left: 0;
   right: 0;
-  background: #E77500;
+  background: #B85C00;
   transform: translateY(-110%);
   transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
   z-index: -1;
@@ -223,18 +226,18 @@ button.nav-link {
 }
 .nav-link--primary {
   font-weight: 700;
-  color: #E77500;
+  color: #B85C00;
   font-size: 1.5rem;
   letter-spacing: 0.04em;
   transition: font-size 0.35s ease, color 0.2s ease;
 }
 .nav-link--cta {
-  background: #E77500;
+  background: #B85C00;
   border-radius: 0;
   padding: 8px 18px;
   color: #ffffff;
   font-weight: 500;
-  box-shadow: 0 2px 10px rgba(231, 117, 0, 0.3);
+  box-shadow: 0 2px 10px rgba(184, 92, 0, 0.3);
   white-space: nowrap;
 }
 .nav-link--cta:hover,
