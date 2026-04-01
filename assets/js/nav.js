@@ -50,7 +50,7 @@
     });
 
     // Close menu when viewport grows past the breakpoint
-    const mql = window.matchMedia('(min-width: 769px)');
+    const mql = window.matchMedia('(min-width: 1101px)');
     mql.addEventListener('change', e => {
       if (e.matches && menuIsOpen()) closeMenu();
     });

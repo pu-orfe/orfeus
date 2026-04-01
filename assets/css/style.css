@@ -330,21 +330,13 @@ button.nav-link {
   transform: translateY(-7px) rotate(-45deg);
 }
 
-/* RESPONSIVE NAV: collapse extras into "More" on mid-width screens */
+/* "More" dropdown never used — hamburger replaces it */
 .nav-item--more {
   display: none;
 }
-@media (max-width: 1100px) and (min-width: 769px) {
-  .nav-item--collapsible {
-    display: none;
-  }
-  .nav-item--more {
-    display: flex;
-  }
-}
 
-/* MOBILE NAV: hamburger menu for iPad and smaller */
-@media (max-width: 768px) {
+/* MOBILE NAV: hamburger menu for narrow screens */
+@media (max-width: 1100px) {
   .nav-hamburger {
     display: flex;
   }
