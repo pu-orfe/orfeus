@@ -927,6 +927,21 @@ section h2::after, section h1::after {
   font-weight: 700;
 }
 
+/* PEOPLE PAGE SUBSECTION LABELS */
+#pis > h2,
+#advisers > h2 {
+  font-size: 0.78rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+  font-weight: 700;
+  margin-bottom: 14px;
+}
+#pis > h2::after,
+#advisers > h2::after {
+  display: none;
+}
+
 /* PEOPLE GRID */
 .people-grid {
   display: grid;
