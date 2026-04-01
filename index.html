@@ -298,21 +298,6 @@
   <script src="assets/js/nav.js"></script>
   <script>
     (() => {
-      const nav = document.querySelector('.main-nav');
-      if (!nav) return;
-      nav.classList.add('nav-large');
-      window.addEventListener('scroll', () => {
-        if (window.scrollY > 40) {
-          nav.classList.remove('nav-large');
-        } else {
-          nav.classList.add('nav-large');
-        }
-      }, { passive: true });
-    })();
-
-  </script>
-  <script>
-    (() => {
       const img = document.getElementById('gif-texas2030');
       const btn = document.getElementById('gif-toggle');
       if (!img || !btn) return;

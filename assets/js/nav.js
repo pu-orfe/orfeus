@@ -155,4 +155,17 @@
     // Initialize
     trigger.setAttribute('aria-expanded', 'false');
   });
+
+  /* ── Shrink nav on scroll ── */
+  const nav = document.querySelector('.main-nav');
+  if (nav) {
+    nav.classList.add('nav-large');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 40) {
+        nav.classList.remove('nav-large');
+      } else {
+        nav.classList.add('nav-large');
+      }
+    }, { passive: true });
+  }
 })();
