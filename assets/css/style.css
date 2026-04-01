@@ -101,10 +101,10 @@ textarea:focus-visible {
   backdrop-filter: blur(18px);
   transition: padding 0.35s ease;
 }
-/* Large nav state for homepage before scrolling */
+/* Large nav state before scrolling */
 .main-nav.nav-large {
-  padding-top: 32px;
-  padding-bottom: 32px;
+  padding-top: 40px;
+  padding-bottom: 40px;
 }
 .main-nav.nav-large .nav-brand-princeton {
   height: 68px;
@@ -674,6 +674,13 @@ section > .card {
 }
 .card > .card-actions:first-child {
   margin-top: 0;
+}
+.card h2 a {
+  text-decoration: none;
+  color: inherit;
+}
+.card h2 a:hover {
+  color: var(--accent);
 }
 .card-actions {
   margin-top: 10px;
