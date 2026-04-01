@@ -10,9 +10,9 @@
 </head>
 <body>
   <a class="skip-link" href="#main-content">Skip to main content</a>
-  <header class="princeton-shell sr-only">
+  <div class="princeton-shell sr-only">
     ORFEUS · Operational Risk Financialization of Electricity Under Stochasticity
-  </header>
+  </div>
 
   <nav class="main-nav" aria-label="Main navigation">
     <div class="nav-brand">
@@ -38,12 +38,12 @@
       </li>
       <li class="nav-item nav-item--collapsible">
         <button class="nav-link" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="dropdown-dataviz">Data Visualization <span class="nav-arrow" aria-hidden="true">▾</span></button>
-        <div class="nav-dropdown" id="dropdown-dataviz" role="group" aria-label="Data Visualization submenu">
-          <a href="data-visualization.html">Data Visualization Overview</a>
-          <a href="data-visualization-scenarios.html">Scenarios Visualization</a>
-          <a href="data-visualization-reliability.html">Reliability Cost Index</a>
-          <a href="data-visualization-lmp.html">LMP Geographical Visualization</a>
-        </div>
+        <ul class="nav-dropdown" id="dropdown-dataviz" aria-label="Data Visualization submenu">
+          <li><a href="data-visualization.html">Data Visualization Overview</a></li>
+          <li><a href="data-visualization-scenarios.html">Scenarios Visualization</a></li>
+          <li><a href="data-visualization-reliability.html">Reliability Cost Index</a></li>
+          <li><a href="data-visualization-lmp.html">LMP Geographical Visualization</a></li>
+        </ul>
       </li>
       <li class="nav-item nav-item--collapsible">
         <a href="data-download.html" class="nav-link">Data Download</a>
@@ -53,13 +53,13 @@
       </li>
       <li class="nav-item nav-item--more">
         <button class="nav-link" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="dropdown-more">More <span class="nav-arrow" aria-hidden="true">▾</span></button>
-        <div class="nav-dropdown" id="dropdown-more" role="group" aria-label="More navigation links">
-          <a href="papers.html">Papers</a>
-          <a href="blogs.html">Blog</a>
-          <a href="data-visualization.html">Data Visualization</a>
-          <a href="data-download.html">Data Download</a>
-          <a href="assets/arpa_e_poster_2024/ARPA_E_poster_2024.pdf">ORFEUS Poster <span class="sr-only">(PDF)</span></a>
-        </div>
+        <ul class="nav-dropdown" id="dropdown-more" aria-label="More navigation links">
+          <li><a href="papers.html">Papers</a></li>
+          <li><a href="blogs.html">Blog</a></li>
+          <li><a href="data-visualization.html">Data Visualization</a></li>
+          <li><a href="data-download.html">Data Download</a></li>
+          <li><a href="assets/arpa_e_poster_2024/ARPA_E_poster_2024.pdf">ORFEUS Poster <span class="sr-only">(PDF)</span></a></li>
+        </ul>
       </li>
     </ul>
   </nav>
@@ -76,7 +76,7 @@
 
       <div class="card" style="margin-top:14px;">
         <div class="tag">Scenarios</div>
-        <h3>Nodal Load and Generation Scenarios</h3>
+        <h2>Nodal Load and Generation Scenarios</h2>
         <p>
           Joint Monte Carlo scenarios for power load demand, solar generation, and wind generation.
           Scenarios are produced by PGscen, an open-source simulation tool trained on historical
@@ -91,7 +91,7 @@
 
       <div class="card">
         <div class="tag">System Costs</div>
-        <h3>System Operation Cost Data</h3>
+        <h2>System Operation Cost Data</h2>
         <p>
           Distributions of running costs derived from feeding scenario batches through
           security-constrained unit commitment and economic dispatch simulations of the
@@ -101,7 +101,7 @@
 
       <div class="card">
         <div class="tag">Risk Indices</div>
-        <h3>Risk Allocation and Reliability Cost Indices</h3>
+        <h2>Risk Allocation and Reliability Cost Indices</h2>
         <p>
           Asset-level and zone-level reliability cost allocations computed using coherent
           risk measures and Shapley-value-based methodologies. Includes system risk indices
@@ -114,7 +114,7 @@
 
       <div class="card">
         <div class="tag">LMPs</div>
-        <h3>Locational Marginal Prices</h3>
+        <h2>Locational Marginal Prices</h2>
         <p>
           Locational Marginal Prices (LMPs) and Marginal Emission Rates adjusted for risk,
           generated across scenario batches for geographic and temporal analysis.
@@ -126,7 +126,7 @@
 
       <div class="card">
         <div class="tag">Globus</div>
-        <h3>Data Transfer with Globus</h3>
+        <h2>Data Transfer with Globus</h2>
         <p>
           We also provide the option to transfer large datasets via Globus.
           To request a data transfer, please contact us.
@@ -147,11 +147,11 @@
           &copy; 2026 The Trustees of Princeton University
         </div>
       </div>
-      <div class="footer-links">
+      <nav class="footer-links" aria-label="Footer navigation">
         <a href="https://www.princeton.edu/content/privacy-notice">Privacy Notice</a>
-        <a href="https://accessibility.princeton.edu">Accessibility</a>
-        <a href="https://inclusive.princeton.edu">Diversity &amp; Non-Discrimination</a>
-      </div>
+        <a href="https://accessibility.princeton.edu/help">Accessibility Help</a>
+        <a href="https://inclusive.princeton.edu/about/diversity-and-non-discrimination">Diversity &amp; Non-Discrimination</a>
+      </nav>
     </div>
   </footer>
   <script src="assets/js/reveal.js"></script>
