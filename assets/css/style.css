@@ -985,6 +985,7 @@ section h2::after, section h1::after {
 
 .article-page {
   max-width: 920px;
+  margin-top: 48px;
 }
 
 .article-page h1,
