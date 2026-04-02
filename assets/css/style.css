@@ -790,10 +790,6 @@ section > .card {
   align-items: center;
   gap: 14px;
 }
-.footer-logo {
-  height: 42px;
-  object-fit: contain;
-}
 .footer-brand-text {
   font-size: 0.85rem;
   line-height: 1.5;
