@@ -358,6 +358,7 @@ button.nav-link {
     border-top: 1px solid var(--border);
     box-shadow: 0 12px 32px rgba(0, 0, 0, 0.1);
     flex-direction: column;
+    gap: 0;
     padding: 8px 0;
     z-index: 60;
   }
@@ -407,7 +408,7 @@ button.nav-link {
     min-width: 0;
   }
   .nav-dropdown a {
-    padding-left: 40px;
+    padding: 12px 24px 12px 40px;
     font-size: 0.88rem;
   }
   /* Hide the dropdown arrow indicators in mobile */
