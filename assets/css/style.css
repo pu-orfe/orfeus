@@ -119,13 +119,15 @@ textarea:focus-visible {
 .main-nav.nav-large .nav-link--primary {
   font-size: 2.6rem;
 }
-.main-nav.nav-large .nav-link {
-  padding: 32px 12px;
-  margin: -32px 0;
-}
-.main-nav.nav-large .nav-link--cta {
-  padding: 8px 18px;
-  margin: 0;
+@media (min-width: 1101px) {
+  .main-nav.nav-large .nav-link {
+    padding: 32px 12px;
+    margin: -32px 0;
+  }
+  .main-nav.nav-large .nav-link--cta {
+    padding: 8px 18px;
+    margin: 0;
+  }
 }
 .nav-brand {
   display: flex;
