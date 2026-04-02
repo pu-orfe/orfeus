@@ -329,6 +329,9 @@ button.nav-link {
   transition: transform 0.3s ease, opacity 0.3s ease;
 }
 /* Animate to X when open */
+.nav-hamburger[aria-expanded="true"] .nav-hamburger-line {
+  border-radius: 0;
+}
 .nav-hamburger[aria-expanded="true"] .nav-hamburger-line:nth-child(1) {
   transform: translateY(7px) rotate(45deg);
 }
