@@ -616,6 +616,15 @@ section p.lead {
   color: var(--muted);
   margin-bottom: 14px;
 }
+.commercial-partner {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-top: 18px;
+}
+.commercial-partner a {
+  font-weight: 700;
+}
 .grid-3 {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
